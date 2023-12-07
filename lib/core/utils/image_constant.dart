@@ -147,6 +147,7 @@ class ImageConstant {
 
   // 01_Splash Screen images
   static String imgLogo = '$imagePath/img_logo.svg';
+  static String mainLogo = '$imagePath/rocketfly_logo.png';
 
   // 17_Select Courses Screen images
   static String imgGroup199 = '$imagePath/img_group_199.svg';

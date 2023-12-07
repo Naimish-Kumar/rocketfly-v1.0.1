@@ -7,10 +7,8 @@ import 'package:rocketfly/presentation/let_s_you_in_screen/let_s_you_in_screen.d
 import 'package:rocketfly/presentation/sign_in_screen_one_screen/sign_in_screen_one_screen.dart';
 import 'package:rocketfly/presentation/sign_up_screen_one_screen/sign_up_screen_one_screen.dart';
 import 'package:rocketfly/presentation/forget_password_screen_one_screen/forget_password_screen_one_screen.dart';
-import 'package:rocketfly/presentation/verify_phone_number_screen/verify_phone_number_screen.dart';
 import 'package:rocketfly/presentation/reset_password_screen/reset_password_screen.dart';
 import 'package:rocketfly/presentation/preferred_language_screen/preferred_language_screen.dart';
-import 'package:rocketfly/presentation/home_screen_container_screen/home_screen_container_screen.dart';
 import 'package:rocketfly/presentation/search_no_result_found_screen/search_no_result_found_screen.dart';
 import 'package:rocketfly/presentation/search_result_found_screen/search_result_found_screen.dart';
 import 'package:rocketfly/presentation/single_course_lesson_screen_tab_container_screen/single_course_lesson_screen_tab_container_screen.dart';
@@ -43,24 +41,17 @@ import 'package:rocketfly/presentation/onboarding_screen_one_screen/onboarding_s
 import 'package:rocketfly/presentation/onboarding_screen_two_screen/onboarding_screen_two_screen.dart';
 import 'package:rocketfly/presentation/onboarding_screen_three_screen/onboarding_screen_three_screen.dart';
 import 'package:rocketfly/presentation/let_s_you_in_screen_one_screen/let_s_you_in_screen_one_screen.dart';
-import 'package:rocketfly/presentation/sign_in_screen/sign_in_screen.dart';
 import 'package:rocketfly/presentation/sign_up_screen/sign_up_screen.dart';
 import 'package:rocketfly/presentation/forget_password_screen/forget_password_screen.dart';
 import 'package:rocketfly/presentation/check_your_mail_screen/check_your_mail_screen.dart';
-import 'package:rocketfly/presentation/reset_password_screen_one_screen/reset_password_screen_one_screen.dart';
 import 'package:rocketfly/presentation/verify_phone_number_screen_one_screen/verify_phone_number_screen_one_screen.dart';
 import 'package:rocketfly/presentation/notification_allow_screen/notification_allow_screen.dart';
-import 'package:rocketfly/presentation/preferred_language_screen_one_screen/preferred_language_screen_one_screen.dart';
 import 'package:rocketfly/presentation/primary_goal_screen/primary_goal_screen.dart';
 import 'package:rocketfly/presentation/spend_learning_screen/spend_learning_screen.dart';
 import 'package:rocketfly/presentation/choose_interests_screen/choose_interests_screen.dart';
 import 'package:rocketfly/presentation/select_courses_screen/select_courses_screen.dart';
 import 'package:rocketfly/presentation/home_screen_one_tab_container_screen/home_screen_one_tab_container_screen.dart';
 import 'package:rocketfly/presentation/search_screen/search_screen.dart';
-import 'package:rocketfly/presentation/search_no_result_found_screen_one_screen/search_no_result_found_screen_one_screen.dart';
-import 'package:rocketfly/presentation/search_result_found_screen_one_screen/search_result_found_screen_one_screen.dart';
-import 'package:rocketfly/presentation/search_result_found_filter_screen/search_result_found_filter_screen.dart';
-import 'package:rocketfly/presentation/category_screen_one_screen/category_screen_one_screen.dart';
 import 'package:rocketfly/presentation/trending_courses_screen_one_screen/trending_courses_screen_one_screen.dart';
 import 'package:rocketfly/presentation/filter_screen_one_screen/filter_screen_one_screen.dart';
 import 'package:rocketfly/presentation/new_release_courses_screen_one_screen/new_release_courses_screen_one_screen.dart';
@@ -98,18 +89,18 @@ import 'package:rocketfly/presentation/app_navigation_screen/app_navigation_scre
 class AppRoutes {
   static const String splashScreenOneScreen = '/splash_screen_one_screen';
 
-  static const String onboardingScreenOneOneScreen =
+  static const String onboardingScreenOne =
       '/onboarding_screen_one_one_screen';
 
-  static const String onboardingScreenTwoOneScreen =
+  static const String onboardingScreenTwo =
       '/onboarding_screen_two_one_screen';
 
-  static const String onboardingScreenThreeOneScreen =
+  static const String onboardingScreenThree =
       '/onboarding_screen_three_one_screen';
 
   static const String letSYouInScreen = '/let_s_you_in_screen';
 
-  static const String signInScreenOneScreen = '/sign_in_screen_one_screen';
+  static const String signInScreen = '/sign_in_screen_';
 
   static const String signUpScreenOneScreen = '/sign_up_screen_one_screen';
 
@@ -225,16 +216,13 @@ class AppRoutes {
   static const String letSYouInScreenOneScreen =
       '/let_s_you_in_screen_one_screen';
 
-  static const String signInScreen = '/sign_in_screen';
-
   static const String signUpScreen = '/sign_up_screen';
 
   static const String forgetPasswordScreen = '/forget_password_screen';
 
   static const String checkYourMailScreen = '/check_your_mail_screen';
 
-  static const String resetPasswordScreenOneScreen =
-      '/reset_password_screen_one_screen';
+
 
   static const String verifyPhoneNumberScreenOneScreen =
       '/verify_phone_number_screen_one_screen';
@@ -272,131 +260,86 @@ class AppRoutes {
 
   static const String trendingCoursesScreenOneScreen =
       '/trending_courses_screen_one_screen';
-
   static const String filterScreenOneScreen = '/filter_screen_one_screen';
-
   static const String newReleaseCoursesScreenOneScreen =
       '/new_release_courses_screen_one_screen';
-
   static const String mentorsScreen = '/mentors_screen';
-
   static const String singleMentorCoursesScreenPage =
       '/single_mentor_courses_screen_page';
-
   static const String singleMentorStudentsScreenPage =
       '/single_mentor_students_screen_page';
-
   static const String singleMentorStudentsScreenTabContainerScreen =
       '/single_mentor_students_screen_tab_container_screen';
-
   static const String singleMentorReviewsScreenPage =
       '/single_mentor_reviews_screen_page';
-
   static const String singleCourseDescriptionScreenOnePage =
       '/single_course_description_screen_one_page';
-
   static const String singleCourseLessonScreenOnePage =
       '/single_course_lesson_screen_one_page';
-
   static const String singleCourseReviewScreenOnePage =
       '/single_course_review_screen_one_page';
-
   static const String reviewsScreenOneScreen = '/reviews_screen_one_screen';
-
   static const String checkoutScreen = '/checkout_screen';
-
   static const String applyCouponScreenOneScreen =
       '/apply_coupon_screen_one_screen';
-
   static const String paymentMethodApplePayScreen =
       '/payment_method_apple_pay_screen';
-
   static const String paymentMethodGPayScreen = '/payment_method_g_pay_screen';
-
   static const String paymentMethodVisaPayScreen =
       '/payment_method_visa_pay_screen';
-
   static const String paymentMethodPaypalScreen =
       '/payment_method_paypal_screen';
-
   static const String paymentMethodAmazonPayScreen =
       '/payment_method_amazon_pay_screen';
-
   static const String paymentSuccessfulScreen = '/payment_successful_screen';
-
   static const String paymentNotSuccessfulScreen =
       '/payment_not_successful_screen';
-
   static const String notificationScreenOneScreen =
       '/notification_screen_one_screen';
-
   static const String bookmarkScreenOneScreen = '/bookmark_screen_one_screen';
-
   static const String myCoursesOngoingScreenOnePage =
       '/my_courses_ongoing_screen_one_page';
-
   static const String singleCoursesOngoingScreenOneScreen =
       '/single_courses_ongoing_screen_one_screen';
-
   static const String myCoursesCompletedScreenOnePage =
       '/my_courses_completed_screen_one_page';
-
   static const String singleCoursesCompleteLessonsScreenOnePage =
       '/single_courses_complete_lessons_screen_one_page';
-
   static const String singleCoursesCompleteCertificateScreenOnePage =
       '/single_courses_complete_certificate_screen_one_page';
-
   static const String completeCourseRatingScreenOneScreen =
       '/complete_course_rating_screen_one_screen';
-
   static const String chatScreen = '/chat_screen';
-
   static const String singleChatScreen = '/single_chat_screen';
-
   static const String profileScreenOneScreen = '/profile_screen_one_screen';
-
   static const String profileEditScreenOneScreen =
       '/profile_edit_screen_one_screen';
-
   static const String myWalletScreen = '/my_wallet_screen';
-
   static const String settingScreenOneScreen = '/setting_screen_one_screen';
-
   static const String notificationScreenOne1Screen =
       '/notification_screen_one1_screen';
-
   static const String languageScreenOneScreen = '/language_screen_one_screen';
-
   static const String currencyScreen = '/currency_screen';
-
   static const String aboutUsScreenOneScreen = '/about_us_screen_one_screen';
-
   static const String privacyPolicyScreenOneScreen =
       '/privacy_policy_screen_one_screen';
-
   static const String faqsScreenOneScreen = '/faqs_screen_one_screen';
-
   static const String sendFeedbackScreenOneScreen =
       '/send_feedback_screen_one_screen';
-
   static const String appNavigationScreen = '/app_navigation_screen';
-
   static const String initialRoute = '/initialRoute';
 
   static Map<String, WidgetBuilder> get routes => {
         splashScreenOneScreen: SplashScreenOneScreen.builder,
-        onboardingScreenOneOneScreen: OnboardingScreenOneOneScreen.builder,
-        onboardingScreenTwoOneScreen: OnboardingScreenTwoOneScreen.builder,
-        onboardingScreenThreeOneScreen: OnboardingScreenThreeOneScreen.builder,
+        onboardingScreenOne: OnboardingScreenOneOneScreen.builder,
+        onboardingScreenTwo: OnboardingScreenTwoOneScreen.builder,
+        onboardingScreenThree: OnboardingScreenThreeOneScreen.builder,
         letSYouInScreen: LetSYouInScreen.builder,
-        signInScreenOneScreen: SignInScreenOneScreen.builder,
+        signInScreen: SignInScreenOneScreen.builder,
         signUpScreenOneScreen: SignUpScreenOneScreen.builder,
         forgetPasswordScreenOneScreen: ForgetPasswordScreenOneScreen.builder,
-        verifyPhoneNumberScreen: VerifyPhoneNumberScreen.builder,
         resetPasswordScreen: ResetPasswordScreen.builder,
         preferredLanguageScreen: PreferredLanguageScreen.builder,
-        homeScreenContainerScreen: HomeScreenContainerScreen.builder,
         searchNoResultFoundScreen: SearchNoResultFoundScreen.builder,
         searchResultFoundScreen: SearchResultFoundScreen.builder,
         singleCourseLessonScreenTabContainerScreen:
@@ -434,16 +377,12 @@ class AppRoutes {
         onboardingScreenTwoScreen: OnboardingScreenTwoScreen.builder,
         onboardingScreenThreeScreen: OnboardingScreenThreeScreen.builder,
         letSYouInScreenOneScreen: LetSYouInScreenOneScreen.builder,
-        signInScreen: SignInScreen.builder,
         signUpScreen: SignUpScreen.builder,
         forgetPasswordScreen: ForgetPasswordScreen.builder,
         checkYourMailScreen: CheckYourMailScreen.builder,
-        resetPasswordScreenOneScreen: ResetPasswordScreenOneScreen.builder,
         verifyPhoneNumberScreenOneScreen:
             VerifyPhoneNumberScreenOneScreen.builder,
         notificationAllowScreen: NotificationAllowScreen.builder,
-        preferredLanguageScreenOneScreen:
-            PreferredLanguageScreenOneScreen.builder,
         primaryGoalScreen: PrimaryGoalScreen.builder,
         spendLearningScreen: SpendLearningScreen.builder,
         chooseInterestsScreen: ChooseInterestsScreen.builder,
@@ -451,12 +390,7 @@ class AppRoutes {
         homeScreenOneTabContainerScreen:
             HomeScreenOneTabContainerScreen.builder,
         searchScreen: SearchScreen.builder,
-        searchNoResultFoundScreenOneScreen:
-            SearchNoResultFoundScreenOneScreen.builder,
-        searchResultFoundScreenOneScreen:
-            SearchResultFoundScreenOneScreen.builder,
-        searchResultFoundFilterScreen: SearchResultFoundFilterScreen.builder,
-        categoryScreenOneScreen: CategoryScreenOneScreen.builder,
+
         trendingCoursesScreenOneScreen: TrendingCoursesScreenOneScreen.builder,
         filterScreenOneScreen: FilterScreenOneScreen.builder,
         newReleaseCoursesScreenOneScreen:

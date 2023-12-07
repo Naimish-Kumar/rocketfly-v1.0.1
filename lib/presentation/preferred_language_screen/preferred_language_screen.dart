@@ -72,6 +72,11 @@ class PreferredLanguageScreenState extends State<PreferredLanguageScreen> {
               _buildPreferredLanguageChipView(context),
               SizedBox(height: 42.v),
               CustomElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(
+                    context,AppRoutes.trendingCoursesScreen
+                  );
+                },
                 text: "lbl_select".tr,
                 buttonStyle: CustomButtonStyles.fillDeepPurpleA,
                 buttonTextStyle: theme.textTheme.titleLarge!,

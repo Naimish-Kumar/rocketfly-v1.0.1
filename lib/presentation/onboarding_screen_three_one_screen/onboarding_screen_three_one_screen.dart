@@ -87,6 +87,9 @@ class OnboardingScreenThreeOneScreenState
   /// Section Widget
   Widget _buildGetStartedButton(BuildContext context) {
     return CustomElevatedButton(
+      onPressed: () {
+        Navigator.pushNamed(context, AppRoutes.letSYouInScreen);
+      },
       text: "lbl_get_started".tr,
       margin: EdgeInsets.only(
         left: 16.h,

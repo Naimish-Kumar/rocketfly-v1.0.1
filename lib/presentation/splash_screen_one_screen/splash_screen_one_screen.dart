@@ -1,6 +1,5 @@
-import 'package:flutter_svg/svg.dart';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:rocketfly/core/app_export.dart';
 import 'provider/splash_screen_one_provider.dart';
 
@@ -35,17 +34,10 @@ class SplashScreenOneScreenState extends State<SplashScreenOneScreen> {
         backgroundColor: theme.colorScheme.primary,
         body: Container(
           width: double.maxFinite,
-          padding: EdgeInsets.symmetric(vertical: 293.v),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset(
-                ImageConstant.imgLogo,
-                semanticsLabel: 'Splash Logo',
-                height: 100,
-                width: 70,
-              ),
-              Spacer(),
+              Image.asset(ImageConstant.mainLogo),
               Text(
                 "msg_learn_anytime_and".tr,
                 style: CustomTextStyles.titleMediumGray70018,

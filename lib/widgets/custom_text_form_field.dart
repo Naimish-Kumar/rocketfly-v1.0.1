@@ -22,7 +22,7 @@ class CustomTextFormField extends StatelessWidget {
     this.suffixConstraints,
     this.contentPadding,
     this.borderDecoration,
-    this.fillColor,
+    this.fillColor = Colors.white,
     this.filled = true,
     this.validator,
   }) : super(
@@ -110,7 +110,7 @@ class CustomTextFormField extends StatelessWidget {
               right: 13.h,
               bottom: 13.v,
             ),
-        fillColor: fillColor ?? theme.colorScheme.errorContainer,
+        fillColor: ColorSchemes.textFieldBackgroundColor,
         filled: filled,
         border: borderDecoration ??
             OutlineInputBorder(

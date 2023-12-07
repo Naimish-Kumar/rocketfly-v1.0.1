@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
                 '',
               ),
             ],
-            initialRoute: AppRoutes.initialRoute,
+            initialRoute: AppRoutes.onboardingScreenOne,
             routes: AppRoutes.routes,
           );
         },

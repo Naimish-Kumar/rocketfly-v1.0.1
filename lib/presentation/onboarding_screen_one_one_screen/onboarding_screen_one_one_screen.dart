@@ -100,6 +100,9 @@ class OnboardingScreenOneOneScreenState
   /// Section Widget
   Widget _buildNextButton(BuildContext context) {
     return CustomElevatedButton(
+      onPressed: (){
+        Navigator.pushNamed(context, AppRoutes.onboardingScreenTwo);
+      },
       text: "lbl_next".tr,
       margin: EdgeInsets.only(
         left: 16.h,

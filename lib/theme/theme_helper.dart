@@ -171,6 +171,7 @@ class TextThemes {
 
 /// Class containing the supported color schemes.
 class ColorSchemes {
+  static final textFieldBackgroundColor = Color.fromARGB(255, 230, 229, 229);
   static final primaryColorScheme = ColorScheme.light(
     // Primary colors
     primary: Color(0XFFFFFFFF),

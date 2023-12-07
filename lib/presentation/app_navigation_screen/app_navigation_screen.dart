@@ -54,19 +54,19 @@ class AppNavigationScreenState extends State<AppNavigationScreen> {
                           context,
                           screenTitle: "02_Onboarding Screen One One".tr,
                           onTapScreenTitle: () => onTapScreenTitle(
-                              AppRoutes.onboardingScreenOneOneScreen),
+                              AppRoutes.onboardingScreenOne),
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: "03_Onboarding Screen Two One".tr,
                           onTapScreenTitle: () => onTapScreenTitle(
-                              AppRoutes.onboardingScreenTwoOneScreen),
+                              AppRoutes.onboardingScreenTwo),
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: "04_Onboarding Screen Three One".tr,
                           onTapScreenTitle: () => onTapScreenTitle(
-                              AppRoutes.onboardingScreenThreeOneScreen),
+                              AppRoutes.onboardingScreenThree),
                         ),
                         _buildScreenTitle(
                           context,
@@ -78,7 +78,7 @@ class AppNavigationScreenState extends State<AppNavigationScreen> {
                           context,
                           screenTitle: "06_Sign In Screen One".tr,
                           onTapScreenTitle: () =>
-                              onTapScreenTitle(AppRoutes.signInScreenOneScreen),
+                              onTapScreenTitle(AppRoutes.signInScreen),
                         ),
                         _buildScreenTitle(
                           context,
@@ -340,12 +340,6 @@ class AppNavigationScreenState extends State<AppNavigationScreen> {
                           screenTitle: "09_Check Your Mail screen".tr,
                           onTapScreenTitle: () =>
                               onTapScreenTitle(AppRoutes.checkYourMailScreen),
-                        ),
-                        _buildScreenTitle(
-                          context,
-                          screenTitle: "10_Reset Password Screen One".tr,
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              AppRoutes.resetPasswordScreenOneScreen),
                         ),
                         _buildScreenTitle(
                           context,

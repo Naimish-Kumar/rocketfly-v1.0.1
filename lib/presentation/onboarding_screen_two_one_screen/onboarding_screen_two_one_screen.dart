@@ -98,6 +98,9 @@ class OnboardingScreenTwoOneScreenState
   Widget _buildNextButton(BuildContext context) {
     return CustomElevatedButton(
       text: "lbl_next".tr,
+      onPressed: () {
+        Navigator.pushNamed(context, AppRoutes.onboardingScreenThree);
+      },
       margin: EdgeInsets.only(
         left: 16.h,
         right: 16.h,
