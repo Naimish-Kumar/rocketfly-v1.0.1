@@ -1,4 +1,3 @@
-import 'models/my_courses_completed_screen_tab_container_model.dart';
 import 'package:flutter/material.dart';
 import 'package:rocketfly/core/app_export.dart';
 import 'package:rocketfly/presentation/my_courses_ongoing_screen_one_page/my_courses_ongoing_screen_one_page.dart';

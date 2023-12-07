@@ -34,7 +34,7 @@ class LanguagelistItemWidget extends StatelessWidget {
             ),
           ),
           CustomImageView(
-            imagePath: languagelistItemModelObj?.english1,
+            imagePath: languagelistItemModelObj.english1,
             height: 24.adaptSize,
             width: 24.adaptSize,
             margin: EdgeInsets.only(left: 269.h),

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/subscription_not_successful_screen/models/subscription_not_successful_model.dart';/// A provider class for the SubscriptionNotSuccessfulScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/subscription_not_successful_screen/models/subscription_not_successful_model.dart';/// A provider class for the SubscriptionNotSuccessfulScreen.
 ///
 /// This provider manages the state of the SubscriptionNotSuccessfulScreen, including the
 /// current subscriptionNotSuccessfulModelObj

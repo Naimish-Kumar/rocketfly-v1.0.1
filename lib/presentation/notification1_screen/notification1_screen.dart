@@ -1,4 +1,4 @@
-import 'models/notification1_model.dart';import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/widgets/app_bar/appbar_subtitle_two.dart';import 'package:rocketfly/widgets/app_bar/appbar_title_image.dart';import 'package:rocketfly/widgets/app_bar/custom_app_bar.dart';import 'package:rocketfly/widgets/custom_switch.dart';import 'provider/notification1_provider.dart';class Notification1Screen extends StatefulWidget {const Notification1Screen({Key? key}) : super(key: key);
+import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/widgets/app_bar/appbar_subtitle_two.dart';import 'package:rocketfly/widgets/app_bar/appbar_title_image.dart';import 'package:rocketfly/widgets/app_bar/custom_app_bar.dart';import 'package:rocketfly/widgets/custom_switch.dart';import 'provider/notification1_provider.dart';class Notification1Screen extends StatefulWidget {const Notification1Screen({Key? key}) : super(key: key);
 
 @override Notification1ScreenState createState() =>  Notification1ScreenState();
 

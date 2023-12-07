@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/home_screen_container_screen/models/home_screen_container_model.dart';/// A provider class for the HomeScreenContainerScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/home_screen_container_screen/models/home_screen_container_model.dart';/// A provider class for the HomeScreenContainerScreen.
 ///
 /// This provider manages the state of the HomeScreenContainerScreen, including the
 /// current homeScreenContainerModelObj

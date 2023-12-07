@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/reviews_screen/models/reviews_model.dart';/// A provider class for the ReviewsScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/reviews_screen/models/reviews_model.dart';/// A provider class for the ReviewsScreen.
 ///
 /// This provider manages the state of the ReviewsScreen, including the
 /// current reviewsModelObj

@@ -1,4 +1,4 @@
-import 'models/home_screen_container_model.dart';import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/home_screen_page/home_screen_page.dart';import 'package:rocketfly/widgets/custom_bottom_bar.dart';import 'provider/home_screen_container_provider.dart';class HomeScreenContainerScreen extends StatefulWidget {const HomeScreenContainerScreen({Key? key}) : super(key: key);
+import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/home_screen_page/home_screen_page.dart';import 'package:rocketfly/widgets/custom_bottom_bar.dart';import 'provider/home_screen_container_provider.dart';class HomeScreenContainerScreen extends StatefulWidget {const HomeScreenContainerScreen({Key? key}) : super(key: key);
 
 @override HomeScreenContainerScreenState createState() =>  HomeScreenContainerScreenState();
 

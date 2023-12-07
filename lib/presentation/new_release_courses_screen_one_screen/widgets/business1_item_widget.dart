@@ -59,7 +59,7 @@ class Business1ItemWidget extends StatelessWidget {
                   padding: EdgeInsets.all(5.h),
                   alignment: Alignment.topRight,
                   child: CustomImageView(
-                    imagePath: business1ItemModelObj?.bookmark,
+                    imagePath: business1ItemModelObj.bookmark,
                   ),
                 ),
               ),

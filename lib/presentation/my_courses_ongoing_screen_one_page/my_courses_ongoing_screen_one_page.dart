@@ -1,6 +1,5 @@
 import '../my_courses_ongoing_screen_one_page/widgets/fightergirlcharacterinblendertutoriallist_item_widget.dart';
 import 'models/fightergirlcharacterinblendertutoriallist_item_model.dart';
-import 'models/my_courses_ongoing_screen_one_model.dart';
 import 'package:flutter/material.dart';
 import 'package:rocketfly/core/app_export.dart';
 import 'provider/my_courses_ongoing_screen_one_provider.dart';

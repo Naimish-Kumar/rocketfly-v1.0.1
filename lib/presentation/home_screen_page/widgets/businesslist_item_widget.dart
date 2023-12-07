@@ -22,7 +22,7 @@ class BusinesslistItemWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomImageView(
-            imagePath: businesslistItemModelObj?.business,
+            imagePath: businesslistItemModelObj.business,
             height: 100.v,
             width: 140.h,
           ),

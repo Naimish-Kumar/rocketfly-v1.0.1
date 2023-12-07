@@ -34,7 +34,7 @@ class DurationItemWidget extends StatelessWidget {
             ),
           ),
           CustomImageView(
-            imagePath: durationItemModelObj?.casualMinutes,
+            imagePath: durationItemModelObj.casualMinutes,
             height: 24.adaptSize,
             width: 24.adaptSize,
           ),

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/preferred_language_screen/models/preferred_language_model.dart';import '../models/preferredlanguagechipview_item_model.dart';/// A provider class for the PreferredLanguageScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/preferred_language_screen/models/preferred_language_model.dart';/// A provider class for the PreferredLanguageScreen.
 ///
 /// This provider manages the state of the PreferredLanguageScreen, including the
 /// current preferredLanguageModelObj

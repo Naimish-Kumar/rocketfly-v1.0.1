@@ -1,4 +1,4 @@
-import '../currency_screen/widgets/currencylist_item_widget.dart';import 'models/currency_model.dart';import 'models/currencylist_item_model.dart';import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/widgets/app_bar/appbar_subtitle.dart';import 'package:rocketfly/widgets/app_bar/appbar_title_image.dart';import 'package:rocketfly/widgets/app_bar/custom_app_bar.dart';import 'provider/currency_provider.dart';class CurrencyScreen extends StatefulWidget {const CurrencyScreen({Key? key}) : super(key: key);
+import '../currency_screen/widgets/currencylist_item_widget.dart';import 'models/currencylist_item_model.dart';import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/widgets/app_bar/appbar_subtitle.dart';import 'package:rocketfly/widgets/app_bar/appbar_title_image.dart';import 'package:rocketfly/widgets/app_bar/custom_app_bar.dart';import 'provider/currency_provider.dart';class CurrencyScreen extends StatefulWidget {const CurrencyScreen({Key? key}) : super(key: key);
 
 @override CurrencyScreenState createState() =>  CurrencyScreenState();
 

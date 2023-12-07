@@ -25,7 +25,7 @@ class ThreeddesignlistItemWidget extends StatelessWidget {
       child: Row(
         children: [
           CustomImageView(
-            imagePath: threeddesignlistItemModelObj?.image,
+            imagePath: threeddesignlistItemModelObj.image,
             height: 128.adaptSize,
             width: 128.adaptSize,
             margin: EdgeInsets.only(top: 2.v),

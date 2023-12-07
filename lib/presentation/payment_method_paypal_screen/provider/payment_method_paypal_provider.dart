@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/payment_method_paypal_screen/models/payment_method_paypal_model.dart';/// A provider class for the PaymentMethodPaypalScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/payment_method_paypal_screen/models/payment_method_paypal_model.dart';/// A provider class for the PaymentMethodPaypalScreen.
 ///
 /// This provider manages the state of the PaymentMethodPaypalScreen, including the
 /// current paymentMethodPaypalModelObj

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/send_feedback_screen_one_screen/models/send_feedback_screen_one_model.dart';/// A provider class for the SendFeedbackScreenOneScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/send_feedback_screen_one_screen/models/send_feedback_screen_one_model.dart';/// A provider class for the SendFeedbackScreenOneScreen.
 ///
 /// This provider manages the state of the SendFeedbackScreenOneScreen, including the
 /// current sendFeedbackScreenOneModelObj

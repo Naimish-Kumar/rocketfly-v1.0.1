@@ -1,4 +1,3 @@
-import 'models/privacy_policy_screen_one_model.dart';
 import 'package:flutter/material.dart';
 import 'package:rocketfly/core/app_export.dart';
 import 'package:rocketfly/widgets/custom_text_form_field.dart';

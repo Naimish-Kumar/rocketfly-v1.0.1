@@ -60,7 +60,7 @@ class List3ddesignItemWidget extends StatelessWidget {
                     padding: EdgeInsets.all(5.h),
                     decoration: IconButtonStyleHelper.fillErrorContainer,
                     child: CustomImageView(
-                      imagePath: list3ddesignItemModelObj?.bookmark,
+                      imagePath: list3ddesignItemModelObj.bookmark,
                     ),
                   ),
                 ],

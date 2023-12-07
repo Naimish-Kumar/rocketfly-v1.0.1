@@ -1,5 +1,4 @@
 import '../preferred_language_screen/widgets/preferredlanguagechipview_item_widget.dart';
-import 'models/preferred_language_model.dart';
 import 'models/preferredlanguagechipview_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:rocketfly/core/app_export.dart';

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/payment_successful_screen/models/payment_successful_model.dart';/// A provider class for the PaymentSuccessfulScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/payment_successful_screen/models/payment_successful_model.dart';/// A provider class for the PaymentSuccessfulScreen.
 ///
 /// This provider manages the state of the PaymentSuccessfulScreen, including the
 /// current paymentSuccessfulModelObj

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/single_course_review_screen_tab_container_screen/models/single_course_review_screen_tab_container_model.dart';/// A provider class for the SingleCourseReviewScreenTabContainerScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/single_course_review_screen_tab_container_screen/models/single_course_review_screen_tab_container_model.dart';/// A provider class for the SingleCourseReviewScreenTabContainerScreen.
 ///
 /// This provider manages the state of the SingleCourseReviewScreenTabContainerScreen, including the
 /// current singleCourseReviewScreenTabContainerModelObj

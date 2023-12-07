@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/complete_course_rating_screen/models/complete_course_rating_model.dart';/// A provider class for the CompleteCourseRatingScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/complete_course_rating_screen/models/complete_course_rating_model.dart';/// A provider class for the CompleteCourseRatingScreen.
 ///
 /// This provider manages the state of the CompleteCourseRatingScreen, including the
 /// current completeCourseRatingModelObj

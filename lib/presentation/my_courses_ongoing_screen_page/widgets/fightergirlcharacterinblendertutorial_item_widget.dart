@@ -22,7 +22,7 @@ class FightergirlcharacterinblendertutorialItemWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CustomImageView(
-            imagePath: fightergirlcharacterinblendertutorialItemModelObj?.image,
+            imagePath: fightergirlcharacterinblendertutorialItemModelObj.image,
             height: 80.adaptSize,
             width: 80.adaptSize,
           ),

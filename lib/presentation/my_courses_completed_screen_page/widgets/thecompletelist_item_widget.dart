@@ -21,7 +21,7 @@ class ThecompletelistItemWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CustomImageView(
-            imagePath: thecompletelistItemModelObj?.image,
+            imagePath: thecompletelistItemModelObj.image,
             height: 80.adaptSize,
             width: 80.adaptSize,
           ),

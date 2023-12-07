@@ -22,7 +22,7 @@ class ListItemWidget extends StatelessWidget {
       child: Row(
         children: [
           CustomImageView(
-            imagePath: listItemModelObj?.image,
+            imagePath: listItemModelObj.image,
             height: 128.adaptSize,
             width: 128.adaptSize,
             margin: EdgeInsets.only(
@@ -55,7 +55,7 @@ class ListItemWidget extends StatelessWidget {
                         padding: EdgeInsets.all(5.h),
                         decoration: IconButtonStyleHelper.fillGray,
                         child: CustomImageView(
-                          imagePath: listItemModelObj?.bookmark,
+                          imagePath: listItemModelObj.bookmark,
                         ),
                       ),
                     ],

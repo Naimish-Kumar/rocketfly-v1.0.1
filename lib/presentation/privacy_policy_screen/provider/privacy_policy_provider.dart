@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rocketfly/core/app_export.dart';
 import 'package:rocketfly/presentation/privacy_policy_screen/models/privacy_policy_model.dart';
 
 /// A provider class for the PrivacyPolicyScreen.

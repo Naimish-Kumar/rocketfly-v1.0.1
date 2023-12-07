@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/checkout_screen/models/checkout_model.dart';/// A provider class for the CheckoutScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/checkout_screen/models/checkout_model.dart';/// A provider class for the CheckoutScreen.
 ///
 /// This provider manages the state of the CheckoutScreen, including the
 /// current checkoutModelObj

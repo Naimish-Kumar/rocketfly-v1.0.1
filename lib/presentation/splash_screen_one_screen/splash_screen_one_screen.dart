@@ -1,4 +1,5 @@
-import 'models/splash_screen_one_model.dart';
+import 'package:flutter_svg/svg.dart';
+
 import 'package:flutter/material.dart';
 import 'package:rocketfly/core/app_export.dart';
 import 'provider/splash_screen_one_provider.dart';
@@ -38,6 +39,12 @@ class SplashScreenOneScreenState extends State<SplashScreenOneScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SvgPicture.asset(
+                ImageConstant.imgLogo,
+                semanticsLabel: 'Splash Logo',
+                height: 100,
+                width: 70,
+              ),
               Spacer(),
               Text(
                 "msg_learn_anytime_and".tr,

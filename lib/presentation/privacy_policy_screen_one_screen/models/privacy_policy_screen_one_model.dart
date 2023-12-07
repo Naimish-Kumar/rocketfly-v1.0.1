@@ -1,1 +1,1 @@
-import '../../../core/app_export.dart';class PrivacyPolicyScreenOneModel { }
+class PrivacyPolicyScreenOneModel { }

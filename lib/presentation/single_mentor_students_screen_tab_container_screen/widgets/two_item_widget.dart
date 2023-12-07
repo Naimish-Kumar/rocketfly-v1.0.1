@@ -29,7 +29,7 @@ class TwoItemWidget extends StatelessWidget {
                 borderRadius: BorderRadiusStyle.circleBorder37,
               ),
               child: CustomImageView(
-                imagePath: twoItemModelObj?.image,
+                imagePath: twoItemModelObj.image,
                 height: 40.adaptSize,
                 width: 40.adaptSize,
                 alignment: Alignment.center,

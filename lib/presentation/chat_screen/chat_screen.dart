@@ -1,5 +1,4 @@
 import '../chat_screen/widgets/chatlist_item_widget.dart';
-import 'models/chat_model.dart';
 import 'models/chatlist_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:rocketfly/core/app_export.dart';

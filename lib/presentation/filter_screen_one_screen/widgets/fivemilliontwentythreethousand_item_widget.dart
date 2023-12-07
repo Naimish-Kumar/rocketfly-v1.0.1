@@ -19,7 +19,7 @@ class FivemilliontwentythreethousandItemWidget extends StatelessWidget {
     return Row(
       children: [
         CustomImageView(
-          imagePath: fivemilliontwentythreethousandItemModelObj?.image,
+          imagePath: fivemilliontwentythreethousandItemModelObj.image,
           height: 24.adaptSize,
           width: 24.adaptSize,
         ),

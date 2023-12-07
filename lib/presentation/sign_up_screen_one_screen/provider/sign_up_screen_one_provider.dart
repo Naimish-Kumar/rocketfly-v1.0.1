@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/sign_up_screen_one_screen/models/sign_up_screen_one_model.dart';/// A provider class for the SignUpScreenOneScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/sign_up_screen_one_screen/models/sign_up_screen_one_model.dart';/// A provider class for the SignUpScreenOneScreen.
 ///
 /// This provider manages the state of the SignUpScreenOneScreen, including the
 /// current signUpScreenOneModelObj

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/payment_not_successful_screen/models/payment_not_successful_model.dart';/// A provider class for the PaymentNotSuccessfulScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/payment_not_successful_screen/models/payment_not_successful_model.dart';/// A provider class for the PaymentNotSuccessfulScreen.
 ///
 /// This provider manages the state of the PaymentNotSuccessfulScreen, including the
 /// current paymentNotSuccessfulModelObj

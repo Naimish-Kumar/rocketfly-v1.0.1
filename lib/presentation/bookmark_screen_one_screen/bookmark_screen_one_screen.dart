@@ -1,5 +1,4 @@
 import '../bookmark_screen_one_screen/widgets/threeddesignlist1_item_widget.dart';
-import 'models/bookmark_screen_one_model.dart';
 import 'models/threeddesignlist1_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:rocketfly/core/app_export.dart';

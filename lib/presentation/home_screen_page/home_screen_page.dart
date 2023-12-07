@@ -3,7 +3,6 @@ import '../home_screen_page/widgets/businesslist_item_widget.dart';
 import '../home_screen_page/widgets/vector_item_widget.dart';
 import 'models/bookmarklist_item_model.dart';
 import 'models/businesslist_item_model.dart';
-import 'models/home_screen_model.dart';
 import 'models/vector_item_model.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';

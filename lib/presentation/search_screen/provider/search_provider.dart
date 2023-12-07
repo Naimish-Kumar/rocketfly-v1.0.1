@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/search_screen/models/search_model.dart';import '../models/crmmanagementlist_item_model.dart';/// A provider class for the SearchScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/search_screen/models/search_model.dart';/// A provider class for the SearchScreen.
 ///
 /// This provider manages the state of the SearchScreen, including the
 /// current searchModelObj

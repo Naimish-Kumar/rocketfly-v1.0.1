@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/notification_screen/models/notification_model.dart';import '../models/barbaramichelalist_item_model.dart';/// A provider class for the NotificationScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/notification_screen/models/notification_model.dart';/// A provider class for the NotificationScreen.
 ///
 /// This provider manages the state of the NotificationScreen, including the
 /// current notificationModelObj

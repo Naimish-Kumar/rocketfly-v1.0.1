@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/sign_in_screen_one_screen/models/sign_in_screen_one_model.dart';/// A provider class for the SignInScreenOneScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/sign_in_screen_one_screen/models/sign_in_screen_one_model.dart';/// A provider class for the SignInScreenOneScreen.
 ///
 /// This provider manages the state of the SignInScreenOneScreen, including the
 /// current signInScreenOneModelObj

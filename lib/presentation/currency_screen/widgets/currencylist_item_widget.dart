@@ -24,7 +24,7 @@ class CurrencylistItemWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CustomImageView(
-            imagePath: currencylistItemModelObj?.dollar,
+            imagePath: currencylistItemModelObj.dollar,
             height: 24.adaptSize,
             width: 24.adaptSize,
             margin: EdgeInsets.only(left: 2.h),
@@ -42,7 +42,7 @@ class CurrencylistItemWidget extends StatelessWidget {
           ),
           Spacer(),
           CustomImageView(
-            imagePath: currencylistItemModelObj?.dollar2,
+            imagePath: currencylistItemModelObj.dollar2,
             height: 24.adaptSize,
             width: 24.adaptSize,
           ),

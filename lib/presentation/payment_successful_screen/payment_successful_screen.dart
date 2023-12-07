@@ -1,4 +1,4 @@
-import 'models/payment_successful_model.dart';import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/widgets/app_bar/appbar_subtitle.dart';import 'package:rocketfly/widgets/app_bar/appbar_title_image.dart';import 'package:rocketfly/widgets/app_bar/custom_app_bar.dart';import 'package:rocketfly/widgets/custom_elevated_button.dart';import 'provider/payment_successful_provider.dart';class PaymentSuccessfulScreen extends StatefulWidget {const PaymentSuccessfulScreen({Key? key}) : super(key: key);
+import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/widgets/app_bar/appbar_subtitle.dart';import 'package:rocketfly/widgets/app_bar/appbar_title_image.dart';import 'package:rocketfly/widgets/app_bar/custom_app_bar.dart';import 'package:rocketfly/widgets/custom_elevated_button.dart';import 'provider/payment_successful_provider.dart';class PaymentSuccessfulScreen extends StatefulWidget {const PaymentSuccessfulScreen({Key? key}) : super(key: key);
 
 @override PaymentSuccessfulScreenState createState() =>  PaymentSuccessfulScreenState();
 

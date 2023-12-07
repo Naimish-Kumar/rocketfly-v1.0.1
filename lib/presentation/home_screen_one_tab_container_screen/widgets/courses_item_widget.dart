@@ -60,7 +60,7 @@ class CoursesItemWidget extends StatelessWidget {
                     padding: EdgeInsets.all(6.h),
                     alignment: Alignment.topRight,
                     child: CustomImageView(
-                      imagePath: coursesItemModelObj?.bookmark,
+                      imagePath: coursesItemModelObj.bookmark,
                     ),
                   ),
                 ),

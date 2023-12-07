@@ -1,4 +1,4 @@
-import 'models/sign_up_model.dart';import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/core/utils/validation_functions.dart';import 'package:rocketfly/widgets/custom_checkbox_button.dart';import 'package:rocketfly/widgets/custom_elevated_button.dart';import 'package:rocketfly/widgets/custom_icon_button.dart';import 'package:rocketfly/widgets/custom_text_form_field.dart';import 'provider/sign_up_provider.dart';class SignUpScreen extends StatefulWidget {const SignUpScreen({Key? key}) : super(key: key);
+import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/core/utils/validation_functions.dart';import 'package:rocketfly/widgets/custom_checkbox_button.dart';import 'package:rocketfly/widgets/custom_elevated_button.dart';import 'package:rocketfly/widgets/custom_icon_button.dart';import 'package:rocketfly/widgets/custom_text_form_field.dart';import 'provider/sign_up_provider.dart';class SignUpScreen extends StatefulWidget {const SignUpScreen({Key? key}) : super(key: key);
 
 @override SignUpScreenState createState() =>  SignUpScreenState();
 

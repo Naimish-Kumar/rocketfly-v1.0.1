@@ -1,4 +1,3 @@
-import 'models/single_mentor_courses_screen_model.dart';
 import 'package:flutter/material.dart';
 import 'package:rocketfly/core/app_export.dart';
 import 'package:rocketfly/widgets/custom_elevated_button.dart';

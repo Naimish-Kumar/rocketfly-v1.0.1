@@ -1,5 +1,4 @@
 import '../my_courses_completed_screen_one_page/widgets/thecompletelist1_item_widget.dart';
-import 'models/my_courses_completed_screen_one_model.dart';
 import 'models/thecompletelist1_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:rocketfly/core/app_export.dart';

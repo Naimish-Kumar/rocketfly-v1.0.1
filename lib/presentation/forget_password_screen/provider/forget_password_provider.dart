@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/forget_password_screen/models/forget_password_model.dart';/// A provider class for the ForgetPasswordScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/forget_password_screen/models/forget_password_model.dart';/// A provider class for the ForgetPasswordScreen.
 ///
 /// This provider manages the state of the ForgetPasswordScreen, including the
 /// current forgetPasswordModelObj

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/search_no_result_found_screen/models/search_no_result_found_model.dart';/// A provider class for the SearchNoResultFoundScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/search_no_result_found_screen/models/search_no_result_found_model.dart';/// A provider class for the SearchNoResultFoundScreen.
 ///
 /// This provider manages the state of the SearchNoResultFoundScreen, including the
 /// current searchNoResultFoundModelObj

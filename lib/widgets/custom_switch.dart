@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:rocketfly/core/app_export.dart';
 
 class CustomSwitch extends StatelessWidget {

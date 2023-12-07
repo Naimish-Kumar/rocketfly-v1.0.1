@@ -1,4 +1,3 @@
-import 'models/profile_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;
 import 'package:rocketfly/core/app_export.dart';

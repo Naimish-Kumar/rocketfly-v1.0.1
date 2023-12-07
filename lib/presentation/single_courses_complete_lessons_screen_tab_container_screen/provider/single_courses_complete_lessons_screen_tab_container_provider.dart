@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/single_courses_complete_lessons_screen_tab_container_screen/models/single_courses_complete_lessons_screen_tab_container_model.dart';/// A provider class for the SingleCoursesCompleteLessonsScreenTabContainerScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/single_courses_complete_lessons_screen_tab_container_screen/models/single_courses_complete_lessons_screen_tab_container_model.dart';/// A provider class for the SingleCoursesCompleteLessonsScreenTabContainerScreen.
 ///
 /// This provider manages the state of the SingleCoursesCompleteLessonsScreenTabContainerScreen, including the
 /// current singleCoursesCompleteLessonsScreenTabContainerModelObj

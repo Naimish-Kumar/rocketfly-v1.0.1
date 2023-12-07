@@ -24,7 +24,7 @@ class DesignlistItemWidget extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           CustomImageView(
-            imagePath: designlistItemModelObj?.image,
+            imagePath: designlistItemModelObj.image,
             height: 180.v,
             width: 343.h,
             alignment: Alignment.center,
@@ -43,7 +43,7 @@ class DesignlistItemWidget extends StatelessWidget {
                     padding: EdgeInsets.all(6.h),
                     alignment: Alignment.centerRight,
                     child: CustomImageView(
-                      imagePath: designlistItemModelObj?.bookmark,
+                      imagePath: designlistItemModelObj.bookmark,
                     ),
                   ),
                   SizedBox(height: 99.v),

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/choose_interests_screen/models/choose_interests_model.dart';import '../models/chooseinterests_item_model.dart';/// A provider class for the ChooseInterestsScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/choose_interests_screen/models/choose_interests_model.dart';/// A provider class for the ChooseInterestsScreen.
 ///
 /// This provider manages the state of the ChooseInterestsScreen, including the
 /// current chooseInterestsModelObj

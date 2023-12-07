@@ -38,7 +38,7 @@ class BookmarklistItemWidget extends StatelessWidget {
                     padding: EdgeInsets.all(6.h),
                     alignment: Alignment.topRight,
                     child: CustomImageView(
-                      imagePath: bookmarklistItemModelObj?.bookmark,
+                      imagePath: bookmarklistItemModelObj.bookmark,
                     ),
                   ),
                 ),
@@ -64,7 +64,7 @@ class BookmarklistItemWidget extends StatelessWidget {
                   ),
                 ),
                 CustomImageView(
-                  imagePath: bookmarklistItemModelObj?.business1,
+                  imagePath: bookmarklistItemModelObj.business1,
                   height: 160.v,
                   width: 140.h,
                   alignment: Alignment.center,
@@ -99,7 +99,7 @@ class BookmarklistItemWidget extends StatelessWidget {
                 ),
               ),
               CustomImageView(
-                imagePath: bookmarklistItemModelObj?.years,
+                imagePath: bookmarklistItemModelObj.years,
                 height: 16.adaptSize,
                 width: 16.adaptSize,
                 margin: EdgeInsets.only(left: 22.h),

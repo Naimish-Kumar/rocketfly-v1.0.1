@@ -60,7 +60,7 @@ class LifestyleItemWidget extends StatelessWidget {
                     padding: EdgeInsets.all(5.h),
                     decoration: IconButtonStyleHelper.fillErrorContainer,
                     child: CustomImageView(
-                      imagePath: lifestyleItemModelObj?.bookmark,
+                      imagePath: lifestyleItemModelObj.bookmark,
                     ),
                   ),
                 ],

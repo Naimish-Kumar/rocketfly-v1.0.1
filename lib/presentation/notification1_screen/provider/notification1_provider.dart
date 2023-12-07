@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/notification1_screen/models/notification1_model.dart';/// A provider class for the Notification1Screen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/notification1_screen/models/notification1_model.dart';/// A provider class for the Notification1Screen.
 ///
 /// This provider manages the state of the Notification1Screen, including the
 /// current notification1ModelObj

@@ -1,6 +1,5 @@
 import '../single_courses_complete_lessons_screen_page/widgets/introductionsection_item_widget.dart';
 import 'models/introductionsection_item_model.dart';
-import 'models/single_courses_complete_lessons_screen_model.dart';
 import 'package:flutter/material.dart';
 import 'package:grouped_list/grouped_list.dart';
 import 'package:rocketfly/core/app_export.dart';

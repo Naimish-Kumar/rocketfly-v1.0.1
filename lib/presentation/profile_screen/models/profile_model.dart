@@ -1,1 +1,1 @@
-import '../../../core/app_export.dart';class ProfileModel { }
+class ProfileModel { }

@@ -1,6 +1,5 @@
 import '../preferred_language_screen_one_screen/widgets/languageselection_item_widget.dart';
 import 'models/languageselection_item_model.dart';
-import 'models/preferred_language_screen_one_model.dart';
 import 'package:flutter/material.dart';
 import 'package:rocketfly/core/app_export.dart';
 import 'package:rocketfly/widgets/custom_elevated_button.dart';

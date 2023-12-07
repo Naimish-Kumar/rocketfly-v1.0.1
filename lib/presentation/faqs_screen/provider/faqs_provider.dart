@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/faqs_screen/models/faqs_model.dart';import '../models/refundstatuscommon_item_model.dart';/// A provider class for the FaqsScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/faqs_screen/models/faqs_model.dart';/// A provider class for the FaqsScreen.
 ///
 /// This provider manages the state of the FaqsScreen, including the
 /// current faqsModelObj

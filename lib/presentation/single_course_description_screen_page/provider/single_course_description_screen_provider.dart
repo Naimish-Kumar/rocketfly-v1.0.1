@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rocketfly/core/app_export.dart';
 import 'package:rocketfly/presentation/single_course_description_screen_page/models/single_course_description_screen_model.dart';
 
 /// A provider class for the SingleCourseDescriptionScreenPage.

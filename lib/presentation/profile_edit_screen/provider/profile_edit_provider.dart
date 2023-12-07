@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/profile_edit_screen/models/profile_edit_model.dart';/// A provider class for the ProfileEditScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/profile_edit_screen/models/profile_edit_model.dart';/// A provider class for the ProfileEditScreen.
 ///
 /// This provider manages the state of the ProfileEditScreen, including the
 /// current profileEditModelObj

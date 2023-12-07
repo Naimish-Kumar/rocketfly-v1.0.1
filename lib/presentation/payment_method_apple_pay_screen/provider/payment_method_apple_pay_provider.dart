@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/payment_method_apple_pay_screen/models/payment_method_apple_pay_model.dart';/// A provider class for the PaymentMethodApplePayScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/payment_method_apple_pay_screen/models/payment_method_apple_pay_model.dart';/// A provider class for the PaymentMethodApplePayScreen.
 ///
 /// This provider manages the state of the PaymentMethodApplePayScreen, including the
 /// current paymentMethodApplePayModelObj

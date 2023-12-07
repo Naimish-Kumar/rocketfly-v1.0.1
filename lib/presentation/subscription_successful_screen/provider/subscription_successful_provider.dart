@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/subscription_successful_screen/models/subscription_successful_model.dart';/// A provider class for the SubscriptionSuccessfulScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/subscription_successful_screen/models/subscription_successful_model.dart';/// A provider class for the SubscriptionSuccessfulScreen.
 ///
 /// This provider manages the state of the SubscriptionSuccessfulScreen, including the
 /// current subscriptionSuccessfulModelObj

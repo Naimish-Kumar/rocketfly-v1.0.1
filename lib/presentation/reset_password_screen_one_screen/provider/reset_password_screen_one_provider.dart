@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/reset_password_screen_one_screen/models/reset_password_screen_one_model.dart';/// A provider class for the ResetPasswordScreenOneScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/reset_password_screen_one_screen/models/reset_password_screen_one_model.dart';/// A provider class for the ResetPasswordScreenOneScreen.
 ///
 /// This provider manages the state of the ResetPasswordScreenOneScreen, including the
 /// current resetPasswordScreenOneModelObj

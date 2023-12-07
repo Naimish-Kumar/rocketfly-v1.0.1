@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/my_wallet_screen/models/my_wallet_model.dart';/// A provider class for the MyWalletScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/my_wallet_screen/models/my_wallet_model.dart';/// A provider class for the MyWalletScreen.
 ///
 /// This provider manages the state of the MyWalletScreen, including the
 /// current myWalletModelObj

@@ -4,7 +4,6 @@ import '../home_screen_one_tab_container_screen/widgets/mentors_item_widget.dart
 import '../home_screen_one_tab_container_screen/widgets/vector1_item_widget.dart';
 import 'models/categories_item_model.dart';
 import 'models/courses_item_model.dart';
-import 'models/home_screen_one_tab_container_model.dart';
 import 'models/mentors_item_model.dart';
 import 'models/vector1_item_model.dart';
 import 'package:carousel_slider/carousel_slider.dart';

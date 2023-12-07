@@ -1,1 +1,1 @@
-import '../../../core/app_export.dart';class NotificationScreenOne1Model { }
+class NotificationScreenOne1Model { }

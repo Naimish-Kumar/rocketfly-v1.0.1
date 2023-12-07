@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/setting_screen/models/setting_model.dart';/// A provider class for the SettingScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/setting_screen/models/setting_model.dart';/// A provider class for the SettingScreen.
 ///
 /// This provider manages the state of the SettingScreen, including the
 /// current settingModelObj

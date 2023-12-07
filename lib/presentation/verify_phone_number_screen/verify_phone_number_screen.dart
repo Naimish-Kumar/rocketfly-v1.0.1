@@ -1,4 +1,3 @@
-import 'models/verify_phone_number_model.dart';
 import 'package:flutter/material.dart';
 import 'package:rocketfly/core/app_export.dart';
 import 'package:rocketfly/core/utils/validation_functions.dart';

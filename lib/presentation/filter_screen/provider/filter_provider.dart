@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/filter_screen/models/filter_model.dart';import '../models/categoriessectionlist_item_model.dart';/// A provider class for the FilterScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/filter_screen/models/filter_model.dart';/// A provider class for the FilterScreen.
 ///
 /// This provider manages the state of the FilterScreen, including the
 /// current filterModelObj

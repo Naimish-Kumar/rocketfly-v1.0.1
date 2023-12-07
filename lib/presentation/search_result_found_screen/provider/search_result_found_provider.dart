@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';import 'package:rocketfly/core/app_export.dart';import 'package:rocketfly/presentation/search_result_found_screen/models/search_result_found_model.dart';import '../models/list_item_model.dart';/// A provider class for the SearchResultFoundScreen.
+import 'package:flutter/material.dart';import 'package:rocketfly/presentation/search_result_found_screen/models/search_result_found_model.dart';/// A provider class for the SearchResultFoundScreen.
 ///
 /// This provider manages the state of the SearchResultFoundScreen, including the
 /// current searchResultFoundModelObj
