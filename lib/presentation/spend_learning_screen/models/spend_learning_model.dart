@@ -1,0 +1,3 @@
+import '../../../core/app_export.dart';import 'duration_item_model.dart';class SpendLearningModel {List<DurationItemModel> durationItemList = [DurationItemModel(duration: "Casual (5 Minutes)",casualMinutes:ImageConstant.imgIconErrorcontainer),DurationItemModel(duration: "Regular (10 Minutes)",casualMinutes:ImageConstant.imgIconErrorcontainer),DurationItemModel(duration: "Serious (20 Minutes)",casualMinutes:ImageConstant.imgIconYellow90024x24),DurationItemModel(duration: "Tremendous (60 Minutes)",casualMinutes:ImageConstant.imgIconErrorcontainer),DurationItemModel(duration: "Formidable (90 Minutes)",casualMinutes:ImageConstant.imgIconErrorcontainer)];
+
+ }
