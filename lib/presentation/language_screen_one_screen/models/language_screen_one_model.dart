@@ -1,3 +1,0 @@
-import '../../../core/app_export.dart';import 'languagelist1_item_model.dart';class LanguageScreenOneModel {List<Languagelist1ItemModel> languagelist1ItemList = [Languagelist1ItemModel(english: "English",english1:ImageConstant.imgIcon50),Languagelist1ItemModel(english: "Hindi",english1:ImageConstant.imgIcon51),Languagelist1ItemModel(english: "Spanish",english1:ImageConstant.imgIcon51),Languagelist1ItemModel(english: "French",english1:ImageConstant.imgIcon51),Languagelist1ItemModel(english: "Arabic",english1:ImageConstant.imgIcon51),Languagelist1ItemModel(english: "Bengali",english1:ImageConstant.imgIcon51),Languagelist1ItemModel(english: "Russian",english1:ImageConstant.imgIcon51),Languagelist1ItemModel(english: "Chinese",english1:ImageConstant.imgIcon51)];
-
- }

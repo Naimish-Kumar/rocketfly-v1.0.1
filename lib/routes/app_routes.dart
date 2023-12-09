@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:rocketfly/presentation/splash_screen_one_screen/splash_screen_one_screen.dart';
-import 'package:rocketfly/presentation/onboarding_screen_one_one_screen/onboarding_screen_one_one_screen.dart';
-import 'package:rocketfly/presentation/onboarding_screen_two_one_screen/onboarding_screen_two_one_screen.dart';
-import 'package:rocketfly/presentation/onboarding_screen_three_one_screen/onboarding_screen_three_one_screen.dart';
 import 'package:rocketfly/presentation/let_s_you_in_screen/let_s_you_in_screen.dart';
 import 'package:rocketfly/presentation/sign_in_screen_one_screen/sign_in_screen_one_screen.dart';
 import 'package:rocketfly/presentation/sign_up_screen_one_screen/sign_up_screen_one_screen.dart';
@@ -36,15 +33,7 @@ import 'package:rocketfly/presentation/category_screen/category_screen.dart';
 import 'package:rocketfly/presentation/trending_courses_screen/trending_courses_screen.dart';
 import 'package:rocketfly/presentation/filter_screen/filter_screen.dart';
 import 'package:rocketfly/presentation/new_release_courses_screen/new_release_courses_screen.dart';
-import 'package:rocketfly/presentation/splash_screen/splash_screen.dart';
-import 'package:rocketfly/presentation/onboarding_screen_one_screen/onboarding_screen_one_screen.dart';
-import 'package:rocketfly/presentation/onboarding_screen_two_screen/onboarding_screen_two_screen.dart';
-import 'package:rocketfly/presentation/onboarding_screen_three_screen/onboarding_screen_three_screen.dart';
-import 'package:rocketfly/presentation/let_s_you_in_screen_one_screen/let_s_you_in_screen_one_screen.dart';
-import 'package:rocketfly/presentation/sign_up_screen/sign_up_screen.dart';
-import 'package:rocketfly/presentation/forget_password_screen/forget_password_screen.dart';
-import 'package:rocketfly/presentation/check_your_mail_screen/check_your_mail_screen.dart';
-import 'package:rocketfly/presentation/verify_phone_number_screen_one_screen/verify_phone_number_screen_one_screen.dart';
+import 'package:rocketfly/presentation/verify_phone_number_screen/verify_phone_number_screen.dart';
 import 'package:rocketfly/presentation/notification_allow_screen/notification_allow_screen.dart';
 import 'package:rocketfly/presentation/primary_goal_screen/primary_goal_screen.dart';
 import 'package:rocketfly/presentation/spend_learning_screen/spend_learning_screen.dart';
@@ -67,23 +56,12 @@ import 'package:rocketfly/presentation/payment_method_paypal_screen/payment_meth
 import 'package:rocketfly/presentation/payment_method_amazon_pay_screen/payment_method_amazon_pay_screen.dart';
 import 'package:rocketfly/presentation/payment_successful_screen/payment_successful_screen.dart';
 import 'package:rocketfly/presentation/payment_not_successful_screen/payment_not_successful_screen.dart';
-import 'package:rocketfly/presentation/notification_screen_one_screen/notification_screen_one_screen.dart';
-import 'package:rocketfly/presentation/bookmark_screen_one_screen/bookmark_screen_one_screen.dart';
-import 'package:rocketfly/presentation/single_courses_ongoing_screen_one_screen/single_courses_ongoing_screen_one_screen.dart';
-import 'package:rocketfly/presentation/complete_course_rating_screen_one_screen/complete_course_rating_screen_one_screen.dart';
-import 'package:rocketfly/presentation/chat_screen/chat_screen.dart';
 import 'package:rocketfly/presentation/single_chat_screen/single_chat_screen.dart';
 import 'package:rocketfly/presentation/profile_screen_one_screen/profile_screen_one_screen.dart';
 import 'package:rocketfly/presentation/profile_edit_screen_one_screen/profile_edit_screen_one_screen.dart';
-import 'package:rocketfly/presentation/my_wallet_screen/my_wallet_screen.dart';
-import 'package:rocketfly/presentation/setting_screen_one_screen/setting_screen_one_screen.dart';
 import 'package:rocketfly/presentation/notification_screen_one1_screen/notification_screen_one1_screen.dart';
-import 'package:rocketfly/presentation/language_screen_one_screen/language_screen_one_screen.dart';
 import 'package:rocketfly/presentation/currency_screen/currency_screen.dart';
-import 'package:rocketfly/presentation/about_us_screen_one_screen/about_us_screen_one_screen.dart';
 import 'package:rocketfly/presentation/privacy_policy_screen_one_screen/privacy_policy_screen_one_screen.dart';
-import 'package:rocketfly/presentation/faqs_screen_one_screen/faqs_screen_one_screen.dart';
-import 'package:rocketfly/presentation/send_feedback_screen_one_screen/send_feedback_screen_one_screen.dart';
 import 'package:rocketfly/presentation/app_navigation_screen/app_navigation_screen.dart';
 
 class AppRoutes {
@@ -331,9 +309,6 @@ class AppRoutes {
 
   static Map<String, WidgetBuilder> get routes => {
         splashScreenOneScreen: SplashScreenOneScreen.builder,
-        onboardingScreenOne: OnboardingScreenOneOneScreen.builder,
-        onboardingScreenTwo: OnboardingScreenTwoOneScreen.builder,
-        onboardingScreenThree: OnboardingScreenThreeOneScreen.builder,
         letSYouInScreen: LetSYouInScreen.builder,
         signInScreen: SignInScreenOneScreen.builder,
         signUpScreenOneScreen: SignUpScreenOneScreen.builder,
@@ -372,16 +347,8 @@ class AppRoutes {
         trendingCoursesScreen: TrendingCoursesScreen.builder,
         filterScreen: FilterScreen.builder,
         newReleaseCoursesScreen: NewReleaseCoursesScreen.builder,
-        splashScreen: SplashScreen.builder,
-        onboardingScreenOneScreen: OnboardingScreenOneScreen.builder,
-        onboardingScreenTwoScreen: OnboardingScreenTwoScreen.builder,
-        onboardingScreenThreeScreen: OnboardingScreenThreeScreen.builder,
-        letSYouInScreenOneScreen: LetSYouInScreenOneScreen.builder,
-        signUpScreen: SignUpScreen.builder,
-        forgetPasswordScreen: ForgetPasswordScreen.builder,
-        checkYourMailScreen: CheckYourMailScreen.builder,
         verifyPhoneNumberScreenOneScreen:
-            VerifyPhoneNumberScreenOneScreen.builder,
+            VerifyPhoneNumberScreen.builder,
         notificationAllowScreen: NotificationAllowScreen.builder,
         primaryGoalScreen: PrimaryGoalScreen.builder,
         spendLearningScreen: SpendLearningScreen.builder,
@@ -408,25 +375,12 @@ class AppRoutes {
         paymentMethodAmazonPayScreen: PaymentMethodAmazonPayScreen.builder,
         paymentSuccessfulScreen: PaymentSuccessfulScreen.builder,
         paymentNotSuccessfulScreen: PaymentNotSuccessfulScreen.builder,
-        notificationScreenOneScreen: NotificationScreenOneScreen.builder,
-        bookmarkScreenOneScreen: BookmarkScreenOneScreen.builder,
-        singleCoursesOngoingScreenOneScreen:
-            SingleCoursesOngoingScreenOneScreen.builder,
-        completeCourseRatingScreenOneScreen:
-            CompleteCourseRatingScreenOneScreen.builder,
-        chatScreen: ChatScreen.builder,
         singleChatScreen: SingleChatScreen.builder,
         profileScreenOneScreen: ProfileScreenOneScreen.builder,
         profileEditScreenOneScreen: ProfileEditScreenOneScreen.builder,
-        myWalletScreen: MyWalletScreen.builder,
-        settingScreenOneScreen: SettingScreenOneScreen.builder,
         notificationScreenOne1Screen: NotificationScreenOne1Screen.builder,
-        languageScreenOneScreen: LanguageScreenOneScreen.builder,
         currencyScreen: CurrencyScreen.builder,
-        aboutUsScreenOneScreen: AboutUsScreenOneScreen.builder,
         privacyPolicyScreenOneScreen: PrivacyPolicyScreenOneScreen.builder,
-        faqsScreenOneScreen: FaqsScreenOneScreen.builder,
-        sendFeedbackScreenOneScreen: SendFeedbackScreenOneScreen.builder,
         appNavigationScreen: AppNavigationScreen.builder,
         initialRoute: SplashScreenOneScreen.builder
       };

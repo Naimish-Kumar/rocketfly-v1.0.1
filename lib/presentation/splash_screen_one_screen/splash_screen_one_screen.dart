@@ -33,8 +33,7 @@ class SplashScreenOneScreenState extends State<SplashScreenOneScreen> {
         backgroundColor: theme.colorScheme.primary,
         body: Container(
           width: double.maxFinite,
-          child: SafeArea(
-            child: Column(
+          child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(ImageConstant.mainLogo),
@@ -45,7 +44,6 @@ class SplashScreenOneScreenState extends State<SplashScreenOneScreen> {
               ],
             ),
           ),
-        ),
     );
   }
 }

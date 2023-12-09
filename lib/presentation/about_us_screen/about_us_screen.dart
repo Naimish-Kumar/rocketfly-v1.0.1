@@ -27,12 +27,12 @@ class AboutUsScreenState extends State<AboutUsScreen> {
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
     return Scaffold(
-      backgroundColor: theme.colorScheme.primary,
-      appBar: _buildAppBar(context),
-      body: Container(
-        width: double.maxFinite,
-        padding: EdgeInsets.symmetric(horizontal: 15.h, vertical: 22.v),
-        child: Column(
+        backgroundColor: theme.colorScheme.primary,
+        appBar: _buildAppBar(context),
+        body: Container(
+          width: double.maxFinite,
+          padding: EdgeInsets.symmetric(horizontal: 15.h, vertical: 22.v),
+          child: Column(
             children: [
               SizedBox(
                 width: 342.h,
@@ -44,8 +44,8 @@ class AboutUsScreenState extends State<AboutUsScreen> {
                       .copyWith(height: 1.25),
                 ),
               ),
-              SizedBox(height: 21.v),
-              _buildSocialMedia(context),
+              SizedBox(height: 41.v),
+               _buildSocialMedia(context),
               SizedBox(height: 5.v)
             ],
           ),
@@ -92,29 +92,35 @@ class AboutUsScreenState extends State<AboutUsScreen> {
 
   /// Section Widget
   Widget _buildSocialMedia(BuildContext context) {
-    return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+    children: [
       Padding(
         padding: EdgeInsets.only(right: 8.h, bottom: 1.v),
         child: _buildInstagram(context,
             userImage: ImageConstant.imgIconIndigo600,
+            backgroundColor: Colors.indigo.withOpacity(0.1),
             userName: "lbl_facebook".tr),
       ),
       Padding(
         padding: EdgeInsets.symmetric(horizontal: 8.h),
         child: _buildInstagram(context,
             userImage: ImageConstant.imgIcon40x40,
+            backgroundColor: Colors.deepOrange.withOpacity(0.1),
             userName: "lbl_instagram".tr),
       ),
       Padding(
         padding: EdgeInsets.only(left: 8.h, right: 8.h, bottom: 1.v),
         child: _buildInstagram(context,
             userImage: ImageConstant.imgIconBlue500,
+            backgroundColor: Colors.blue.withOpacity(0.1),
             userName: "lbl_twitter".tr),
       ),
       Padding(
         padding: EdgeInsets.only(left: 8.h, bottom: 1.v),
         child: _buildInstagram(context,
             userImage: ImageConstant.imgIconRedA70001,
+            backgroundColor: Colors.red.withOpacity(0.1),
             userName: "lbl_youtube".tr),
       )
     ]);
@@ -124,18 +130,16 @@ class AboutUsScreenState extends State<AboutUsScreen> {
   Widget _buildInstagram(
     BuildContext context, {
     required String userImage,
+    required Color backgroundColor,
     required String userName,
   }) {
-    return Expanded(
-      child: SizedBox(
-        width: double.maxFinite,
-        child: Column(
+    return Column(
           children: [
             Container(
               height: 74.adaptSize,
               width: 74.adaptSize,
               padding: EdgeInsets.all(17.h),
-              decoration: AppDecoration.gradientPrimaryContainerToAmber
+              decoration: BoxDecoration(color: backgroundColor)
                   .copyWith(borderRadius: BorderRadiusStyle.circleBorder37),
               child: CustomImageView(
                   imagePath: userImage,
@@ -150,8 +154,6 @@ class AboutUsScreenState extends State<AboutUsScreen> {
                   .copyWith(color: appTheme.gray700),
             )
           ],
-        ),
-      ),
     );
   }
 

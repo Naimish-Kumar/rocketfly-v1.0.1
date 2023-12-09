@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:rocketfly/presentation/onboarding_screen/onboarding_screen.dart';
 import 'core/app_export.dart';
 
 var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
@@ -40,8 +41,9 @@ class MyApp extends StatelessWidget {
                 '',
               ),
             ],
-            initialRoute: AppRoutes.aboutUsScreen,
+            //initialRoute: AppRoutes.appNavigationScreen,
             routes: AppRoutes.routes,
+            home: OnBoardingScreen(),
           );
         },
       ),
