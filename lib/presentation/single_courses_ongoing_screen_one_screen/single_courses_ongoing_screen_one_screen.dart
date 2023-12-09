@@ -33,21 +33,22 @@ class SingleCoursesOngoingScreenOneScreenState
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             appBar: _buildAppBar(context),
             body: Container(
                 width: double.maxFinite,
                 padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 22.v),
-                child: Column(children: [
-                  _buildPlaceholder(context),
-                  SizedBox(height: 32.v),
-                  Opacity(opacity: 0.08, child: Divider()),
-                  SizedBox(height: 25.v),
-                  _buildIntroduction(context),
-                  SizedBox(height: 5.v)
-                ])),
-            bottomNavigationBar: _buildContinueCourse(context)));
+                child: SafeArea(
+                  child: Column(children: [
+                    _buildPlaceholder(context),
+                    SizedBox(height: 32.v),
+                    Opacity(opacity: 0.08, child: Divider()),
+                    SizedBox(height: 25.v),
+                    _buildIntroduction(context),
+                    SizedBox(height: 5.v)
+                  ]),
+                )),
+            bottomNavigationBar: _buildContinueCourse(context));
   }
 
   /// Section Widget

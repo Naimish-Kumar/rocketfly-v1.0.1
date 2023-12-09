@@ -29,75 +29,75 @@ class CheckYourMailScreenState extends State<CheckYourMailScreen> {
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
 
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         body: Container(
           width: double.maxFinite,
           padding: EdgeInsets.symmetric(
             horizontal: 16.h,
             vertical: 32.v,
           ),
-          child: Column(
-            children: [
-              _buildImagePlaceholder(context),
-              SizedBox(height: 24.v),
-              Text(
-                "lbl_check_your_mail".tr,
-                style: theme.textTheme.headlineLarge,
-              ),
-              SizedBox(height: 24.v),
-              SizedBox(
-                width: 343.h,
-                child: Text(
-                  "msg_we_have_sent_a_password".tr,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  textAlign: TextAlign.center,
-                  style: theme.textTheme.titleMedium!.copyWith(
-                    height: 1.50,
+          child: SafeArea(
+            child: Column(
+              children: [
+                _buildImagePlaceholder(context),
+                SizedBox(height: 24.v),
+                Text(
+                  "lbl_check_your_mail".tr,
+                  style: theme.textTheme.headlineLarge,
+                ),
+                SizedBox(height: 24.v),
+                SizedBox(
+                  width: 343.h,
+                  child: Text(
+                    "msg_we_have_sent_a_password".tr,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    textAlign: TextAlign.center,
+                    style: theme.textTheme.titleMedium!.copyWith(
+                      height: 1.50,
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(height: 29.v),
-              CustomElevatedButton(
-                text: "lbl_open_email_app".tr,
-              ),
-              SizedBox(height: 27.v),
-              Text(
-                "msg_skip_i_ll_confirm".tr,
-                style: CustomTextStyles.titleMediumPrimarySemiBold_1,
-              ),
-              SizedBox(height: 49.v),
-              Container(
-                width: 307.h,
-                margin: EdgeInsets.only(
-                  left: 18.h,
-                  right: 17.h,
+                SizedBox(height: 29.v),
+                CustomElevatedButton(
+                  text: "lbl_open_email_app".tr,
                 ),
-                child: RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: "msg_did_not_receive2".tr,
-                        style: theme.textTheme.titleMedium,
-                      ),
-                      TextSpan(
-                        text: " ",
-                      ),
-                      TextSpan(
-                        text: "msg_try_another_email".tr,
-                        style: CustomTextStyles.titleMediumPrimarySemiBold,
-                      ),
-                    ],
+                SizedBox(height: 27.v),
+                Text(
+                  "msg_skip_i_ll_confirm".tr,
+                  style: CustomTextStyles.titleMediumPrimarySemiBold_1,
+                ),
+                SizedBox(height: 49.v),
+                Container(
+                  width: 307.h,
+                  margin: EdgeInsets.only(
+                    left: 18.h,
+                    right: 17.h,
                   ),
-                  textAlign: TextAlign.center,
+                  child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "msg_did_not_receive2".tr,
+                          style: theme.textTheme.titleMedium,
+                        ),
+                        TextSpan(
+                          text: " ",
+                        ),
+                        TextSpan(
+                          text: "msg_try_another_email".tr,
+                          style: CustomTextStyles.titleMediumPrimarySemiBold,
+                        ),
+                      ],
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
-              ),
-              SizedBox(height: 5.v),
-            ],
+                SizedBox(height: 5.v),
+              ],
+            ),
           ),
         ),
-      ),
     );
   }
 

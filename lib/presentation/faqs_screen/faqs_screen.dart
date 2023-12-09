@@ -28,27 +28,28 @@ class FaqsScreenState extends State<FaqsScreen> {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             backgroundColor: theme.colorScheme.primary,
             appBar: _buildAppBar(context),
-            body: Padding(
-                padding: EdgeInsets.only(top: 21.v, bottom: 5.v),
-                child:
-                    Consumer<FaqsProvider>(builder: (context, provider, child) {
-                  return ListView.builder(
-                      shrinkWrap: true,
-                      itemCount: provider
-                          .faqsModelObj.refundstatuscommonItemList.length,
-                      itemBuilder: (context, index) {
-                        RefundstatuscommonItemModel model = provider
-                            .faqsModelObj.refundstatuscommonItemList[index];
-                        return RefundstatuscommonItemWidget(model,
-                            onSelectedExpandableList: (value) {
-                          provider.onSelectedExpandableList(index, value);
+            body: SafeArea(
+              child: Padding(
+                  padding: EdgeInsets.only(top: 21.v, bottom: 5.v),
+                  child:
+                      Consumer<FaqsProvider>(builder: (context, provider, child) {
+                    return ListView.builder(
+                        shrinkWrap: true,
+                        itemCount: provider
+                            .faqsModelObj.refundstatuscommonItemList.length,
+                        itemBuilder: (context, index) {
+                          RefundstatuscommonItemModel model = provider
+                              .faqsModelObj.refundstatuscommonItemList[index];
+                          return RefundstatuscommonItemWidget(model,
+                              onSelectedExpandableList: (value) {
+                            provider.onSelectedExpandableList(index, value);
+                          });
                         });
-                      });
-                }))));
+                  })),
+            ));
   }
 
   /// Section Widget

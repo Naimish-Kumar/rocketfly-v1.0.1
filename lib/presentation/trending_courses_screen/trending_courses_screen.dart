@@ -29,71 +29,72 @@ class TrendingCoursesScreenState extends State<TrendingCoursesScreen> {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             backgroundColor: theme.colorScheme.primary,
             appBar: _buildAppBar(context),
             body: SizedBox(
                 width: double.maxFinite,
-                child: Column(children: [
-                  SizedBox(height: 22.v),
-                  Expanded(
-                      child: SingleChildScrollView(
-                          child: Padding(
-                              padding: EdgeInsets.only(
-                                  left: 16.h, right: 16.h, bottom: 5.v),
-                              child: Column(children: [
-                                _buildDesignList(context),
-                                Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text("msg_create_design".tr,
-                                        style: CustomTextStyles
-                                            .titleMediumOnErrorSemiBold)),
-                                SizedBox(height: 6.v),
-                                _buildDuration(context,
-                                    userAge: "lbl_7_11_years".tr,
-                                    userAgeRange: "lbl_5_0".tr),
-                                SizedBox(height: 209.v),
-                                Text("msg_the_complete_20233".tr,
-                                    style: CustomTextStyles
-                                        .titleMediumOnErrorSemiBold),
-                                SizedBox(height: 6.v),
-                                _buildDuration(context,
-                                    userAge: "lbl_16_22_years".tr,
-                                    userAgeRange: "lbl_4_8".tr),
-                                SizedBox(height: 209.v),
-                                Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text("msg_complete_stretching".tr,
-                                        style: CustomTextStyles
-                                            .titleMediumOnErrorSemiBold)),
-                                SizedBox(height: 6.v),
-                                _buildDuration(context,
-                                    userAge: "lbl_23_60_years".tr,
-                                    userAgeRange: "lbl_4_5".tr),
-                                SizedBox(height: 209.v),
-                                Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text("msg_how_to_find_the".tr,
-                                        style: CustomTextStyles
-                                            .titleMediumOnErrorSemiBold)),
-                                SizedBox(height: 6.v),
-                                _buildDuration(context,
-                                    userAge: "lbl_12_15_years".tr,
-                                    userAgeRange: "lbl_4_8".tr),
-                                SizedBox(height: 208.v),
-                                Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text("msg_the_professional".tr,
-                                        style: CustomTextStyles
-                                            .titleMediumOnErrorSemiBold))
-                              ]))))
-                ])),
+                child: SafeArea(
+                  child: Column(children: [
+                    SizedBox(height: 22.v),
+                    Expanded(
+                        child: SingleChildScrollView(
+                            child: Padding(
+                                padding: EdgeInsets.only(
+                                    left: 16.h, right: 16.h, bottom: 5.v),
+                                child: Column(children: [
+                                  _buildDesignList(context),
+                                  Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: Text("msg_create_design".tr,
+                                          style: CustomTextStyles
+                                              .titleMediumOnErrorSemiBold)),
+                                  SizedBox(height: 6.v),
+                                  _buildDuration(context,
+                                      userAge: "lbl_7_11_years".tr,
+                                      userAgeRange: "lbl_5_0".tr),
+                                  SizedBox(height: 209.v),
+                                  Text("msg_the_complete_20233".tr,
+                                      style: CustomTextStyles
+                                          .titleMediumOnErrorSemiBold),
+                                  SizedBox(height: 6.v),
+                                  _buildDuration(context,
+                                      userAge: "lbl_16_22_years".tr,
+                                      userAgeRange: "lbl_4_8".tr),
+                                  SizedBox(height: 209.v),
+                                  Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: Text("msg_complete_stretching".tr,
+                                          style: CustomTextStyles
+                                              .titleMediumOnErrorSemiBold)),
+                                  SizedBox(height: 6.v),
+                                  _buildDuration(context,
+                                      userAge: "lbl_23_60_years".tr,
+                                      userAgeRange: "lbl_4_5".tr),
+                                  SizedBox(height: 209.v),
+                                  Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: Text("msg_how_to_find_the".tr,
+                                          style: CustomTextStyles
+                                              .titleMediumOnErrorSemiBold)),
+                                  SizedBox(height: 6.v),
+                                  _buildDuration(context,
+                                      userAge: "lbl_12_15_years".tr,
+                                      userAgeRange: "lbl_4_8".tr),
+                                  SizedBox(height: 208.v),
+                                  Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: Text("msg_the_professional".tr,
+                                          style: CustomTextStyles
+                                              .titleMediumOnErrorSemiBold))
+                                ]))))
+                  ]),
+                )),
             bottomNavigationBar: Padding(
                 padding: EdgeInsets.only(left: 16.h, right: 16.h, bottom: 49.v),
                 child: _buildDuration(context,
                     userAge: "lbl_7_11_years".tr,
-                    userAgeRange: "lbl_4_6".tr))));
+                    userAgeRange: "lbl_4_6".tr)));
   }
 
   /// Section Widget

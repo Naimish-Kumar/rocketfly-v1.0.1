@@ -38,8 +38,7 @@ class SingleCourseReviewScreenTabContainerScreenState
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             backgroundColor: theme.colorScheme.primary,
             appBar: _buildAppBar(context),
             body: SizedBox(
@@ -48,38 +47,40 @@ class SingleCourseReviewScreenTabContainerScreenState
                     child: SizedBox(
                         height: 2427.v,
                         width: double.maxFinite,
-                        child: Stack(alignment: Alignment.topCenter, children: [
-                          Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    _buildTabview(context),
-                                    SizedBox(height: 516.v),
-                                    _buildTabs(context),
-                                    SizedBox(
-                                        height: 1568.v,
-                                        child: TabBarView(
-                                            controller: tabviewController,
-                                            children: [
-                                              SingleCourseReviewScreenPage
-                                                  .builder(context),
-                                              SingleCourseReviewScreenPage
-                                                  .builder(context),
-                                              SingleCourseReviewScreenPage
-                                                  .builder(context),
-                                              SingleCourseReviewScreenPage
-                                                  .builder(context),
-                                              SingleCourseReviewScreenPage
-                                                  .builder(context)
-                                            ]))
-                                  ])),
-                          CustomImageView(
-                              imagePath: ImageConstant.imgMaskGroup255x374,
-                              height: 255.v,
-                              width: 374.h,
-                              alignment: Alignment.topCenter)
-                        ]))))));
+                        child: SafeArea(
+                          child: Stack(alignment: Alignment.topCenter, children: [
+                            Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      _buildTabview(context),
+                                      SizedBox(height: 516.v),
+                                      _buildTabs(context),
+                                      SizedBox(
+                                          height: 1568.v,
+                                          child: TabBarView(
+                                              controller: tabviewController,
+                                              children: [
+                                                SingleCourseReviewScreenPage
+                                                    .builder(context),
+                                                SingleCourseReviewScreenPage
+                                                    .builder(context),
+                                                SingleCourseReviewScreenPage
+                                                    .builder(context),
+                                                SingleCourseReviewScreenPage
+                                                    .builder(context),
+                                                SingleCourseReviewScreenPage
+                                                    .builder(context)
+                                              ]))
+                                    ])),
+                            CustomImageView(
+                                imagePath: ImageConstant.imgMaskGroup255x374,
+                                height: 255.v,
+                                width: 374.h,
+                                alignment: Alignment.topCenter)
+                          ]),
+                        )))));
   }
 
   /// Section Widget

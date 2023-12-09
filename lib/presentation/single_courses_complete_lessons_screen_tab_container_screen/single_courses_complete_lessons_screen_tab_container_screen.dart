@@ -39,8 +39,7 @@ class SingleCoursesCompleteLessonsScreenTabContainerScreenState
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             backgroundColor: theme.colorScheme.primary,
             appBar: _buildAppBar(context),
             body: SizedBox(
@@ -68,7 +67,7 @@ class SingleCoursesCompleteLessonsScreenTabContainerScreenState
                                 SingleCoursesCompleteCertificateScreenOnePage
                                     .builder(context)
                               ])))
-                ]))));
+                ])));
   }
 
   /// Section Widget

@@ -36,22 +36,22 @@ class ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
 
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         appBar: _buildAppBar(context),
         body: SizedBox(
           width: double.maxFinite,
-          child: Column(
-            children: [
-              SizedBox(height: 22.v),
-              _buildChatList(context),
-              SizedBox(height: 121.v),
-              SizedBox(height: 5.v),
-            ],
+          child: SafeArea(
+            child: Column(
+              children: [
+                SizedBox(height: 22.v),
+                _buildChatList(context),
+                SizedBox(height: 121.v),
+                SizedBox(height: 5.v),
+              ],
+            ),
           ),
         ),
         bottomNavigationBar: _buildBottomAppBar(context),
-      ),
     );
   }
 

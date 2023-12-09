@@ -31,27 +31,28 @@ class ChooseInterestsScreenState extends State<ChooseInterestsScreen> {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             appBar: _buildAppBar(context),
             body: Container(
                 width: double.maxFinite,
                 padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 24.v),
-                child: Column(children: [
-                  Container(
-                      width: 314.h,
-                      margin: EdgeInsets.only(left: 13.h, right: 14.h),
-                      child: Text("msg_choose_3_or_more".tr,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.center,
-                          style: theme.textTheme.titleMedium!
-                              .copyWith(height: 1.50))),
-                  SizedBox(height: 29.v),
-                  _buildChooseInterests(context),
-                  SizedBox(height: 5.v)
-                ])),
-            bottomNavigationBar: _buildNext(context)));
+                child: SafeArea(
+                  child: Column(children: [
+                    Container(
+                        width: 314.h,
+                        margin: EdgeInsets.only(left: 13.h, right: 14.h),
+                        child: Text("msg_choose_3_or_more".tr,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            textAlign: TextAlign.center,
+                            style: theme.textTheme.titleMedium!
+                                .copyWith(height: 1.50))),
+                    SizedBox(height: 29.v),
+                    _buildChooseInterests(context),
+                    SizedBox(height: 5.v)
+                  ]),
+                )),
+            bottomNavigationBar: _buildNext(context));
   }
 
   /// Section Widget

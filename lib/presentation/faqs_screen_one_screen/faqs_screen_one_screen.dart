@@ -29,18 +29,19 @@ class FaqsScreenOneScreenState extends State<FaqsScreenOneScreen> {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             appBar: _buildAppBar(context),
             body: Container(
                 width: double.maxFinite,
                 padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 21.v),
-                child: Column(children: [
-                  _buildRefundStatusCommon(context),
-                  SizedBox(height: 24.v),
-                  _buildFAQ5(context),
-                  SizedBox(height: 5.v)
-                ]))));
+                child: SafeArea(
+                  child: Column(children: [
+                    _buildRefundStatusCommon(context),
+                    SizedBox(height: 24.v),
+                    _buildFAQ5(context),
+                    SizedBox(height: 5.v)
+                  ]),
+                )));
   }
 
   /// Section Widget

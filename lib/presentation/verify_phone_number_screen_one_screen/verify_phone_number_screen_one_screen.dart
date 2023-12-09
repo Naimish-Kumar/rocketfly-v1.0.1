@@ -32,55 +32,56 @@ class VerifyPhoneNumberScreenOneScreenState
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
          // backgroundColor: Colors.white,
             resizeToAvoidBottomInset: false,
             appBar: _buildAppBar(context),
             body: Container(
                 width: double.maxFinite,
                 padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 24.v),
-                child: Column(children: [
-                  _buildOtpView(context),
-                  SizedBox(height: 32.v),
-                  CustomElevatedButton(
-                    onPressed: () {
-                      Navigator.pushNamed(
-                        context,AppRoutes.resetPasswordScreen
-                      );
-                    },
-                    text: "lbl_verify".tr),
-                  Spacer(flex: 53),
-                  Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 120.h),
-                      child: DottedBorder(
-                          color: theme.colorScheme.primary,
-                          padding: EdgeInsets.only(
-                              left: 2.h, top: 2.v, right: 2.h, bottom: 2.v),
-                          strokeWidth: 2.h,
-                          radius: Radius.circular(50),
-                          borderType: BorderType.RRect,
-                          dashPattern: [4, 4],
-                          child: Container(
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: 19.h, vertical: 23.v),
-                              decoration: AppDecoration.outlinePrimary.copyWith(
-                                  borderRadius:
-                                      BorderRadiusStyle.roundedBorder52),
-                              child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    SizedBox(height: 3.v),
-                                    Text("lbl_50_sec".tr,
-                                        style: CustomTextStyles
-                                            .titleLargeLatoRegular),
-                                    SizedBox(height: 3.v),
-                                    Text("lbl_left".tr,
-                                        style: theme.textTheme.titleMedium)
-                                  ])))),
-                  Spacer(flex: 46)
-                ]))));
+                child: SafeArea(
+                  child: Column(children: [
+                    _buildOtpView(context),
+                    SizedBox(height: 32.v),
+                    CustomElevatedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(
+                          context,AppRoutes.resetPasswordScreen
+                        );
+                      },
+                      text: "lbl_verify".tr),
+                    Spacer(flex: 53),
+                    Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 120.h),
+                        child: DottedBorder(
+                            color: theme.colorScheme.primary,
+                            padding: EdgeInsets.only(
+                                left: 2.h, top: 2.v, right: 2.h, bottom: 2.v),
+                            strokeWidth: 2.h,
+                            radius: Radius.circular(50),
+                            borderType: BorderType.RRect,
+                            dashPattern: [4, 4],
+                            child: Container(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 19.h, vertical: 23.v),
+                                decoration: AppDecoration.outlinePrimary.copyWith(
+                                    borderRadius:
+                                        BorderRadiusStyle.roundedBorder52),
+                                child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      SizedBox(height: 3.v),
+                                      Text("lbl_50_sec".tr,
+                                          style: CustomTextStyles
+                                              .titleLargeLatoRegular),
+                                      SizedBox(height: 3.v),
+                                      Text("lbl_left".tr,
+                                          style: theme.textTheme.titleMedium)
+                                    ])))),
+                    Spacer(flex: 46)
+                  ]),
+                )));
   }
 
   /// Section Widget

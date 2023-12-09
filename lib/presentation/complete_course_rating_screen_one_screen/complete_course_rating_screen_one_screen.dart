@@ -31,36 +31,37 @@ class CompleteCourseRatingScreenOneScreenState
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             appBar: _buildAppBar(context),
             body: Container(
                 width: double.maxFinite,
                 padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 22.v),
-                child: Column(children: [
-                  _buildImagePlaceHolder(context),
-                  SizedBox(height: 27.v),
-                  Text("msg_course_completed".tr,
-                      style: theme.textTheme.headlineLarge),
-                  SizedBox(height: 18.v),
-                  Text("msg_please_leave_a_review".tr,
-                      style: theme.textTheme.titleMedium),
-                  SizedBox(height: 24.v),
-                  CustomRatingBar(initialRating: 0, itemSize: 32),
-                  SizedBox(height: 16.v),
-                  CustomElevatedButton(
-                      text: "msg_the_course_mentor".tr,
-                      buttonStyle: CustomButtonStyles.fillYellow,
-                      buttonTextStyle: theme.textTheme.titleSmall!),
-                  SizedBox(height: 33.v),
-                  CustomElevatedButton(text: "lbl_write_review".tr),
-                  SizedBox(height: 16.v),
-                  CustomElevatedButton(
-                      text: "lbl_cancel".tr,
-                      buttonStyle: CustomButtonStyles.fillErrorContainerTL8,
-                      buttonTextStyle: theme.textTheme.titleLarge!),
-                  SizedBox(height: 5.v)
-                ]))));
+                child: SafeArea(
+                  child: Column(children: [
+                    _buildImagePlaceHolder(context),
+                    SizedBox(height: 27.v),
+                    Text("msg_course_completed".tr,
+                        style: theme.textTheme.headlineLarge),
+                    SizedBox(height: 18.v),
+                    Text("msg_please_leave_a_review".tr,
+                        style: theme.textTheme.titleMedium),
+                    SizedBox(height: 24.v),
+                    CustomRatingBar(initialRating: 0, itemSize: 32),
+                    SizedBox(height: 16.v),
+                    CustomElevatedButton(
+                        text: "msg_the_course_mentor".tr,
+                        buttonStyle: CustomButtonStyles.fillYellow,
+                        buttonTextStyle: theme.textTheme.titleSmall!),
+                    SizedBox(height: 33.v),
+                    CustomElevatedButton(text: "lbl_write_review".tr),
+                    SizedBox(height: 16.v),
+                    CustomElevatedButton(
+                        text: "lbl_cancel".tr,
+                        buttonStyle: CustomButtonStyles.fillErrorContainerTL8,
+                        buttonTextStyle: theme.textTheme.titleLarge!),
+                    SizedBox(height: 5.v)
+                  ]),
+                )));
   }
 
   /// Section Widget

@@ -34,48 +34,49 @@ class HomeScreenOnePageState extends State<HomeScreenOnePage>
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
 
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         body: Container(
           width: double.maxFinite,
           decoration: AppDecoration.fillOnPrimaryContainer,
-          child: Column(
-            children: [
-              SizedBox(height: 16.v),
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16.h),
-                  child: Consumer<HomeScreenOneProvider>(
-                    builder: (context, provider, child) {
-                      return ListView.separated(
-                        physics: BouncingScrollPhysics(),
-                        shrinkWrap: true,
-                        separatorBuilder: (
-                          context,
-                          index,
-                        ) {
-                          return SizedBox(
-                            height: 15.v,
-                          );
-                        },
-                        itemCount: provider
-                            .homeScreenOneModelObj.lifestyleItemList.length,
-                        itemBuilder: (context, index) {
-                          LifestyleItemModel model = provider
-                              .homeScreenOneModelObj.lifestyleItemList[index];
-                          return LifestyleItemWidget(
-                            model,
-                          );
-                        },
-                      );
-                    },
+          child: SafeArea(
+            child: Column(
+              children: [
+                SizedBox(height: 16.v),
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16.h),
+                    child: Consumer<HomeScreenOneProvider>(
+                      builder: (context, provider, child) {
+                        return ListView.separated(
+                          physics: BouncingScrollPhysics(),
+                          shrinkWrap: true,
+                          separatorBuilder: (
+                            context,
+                            index,
+                          ) {
+                            return SizedBox(
+                              height: 15.v,
+                            );
+                          },
+                          itemCount: provider
+                              .homeScreenOneModelObj.lifestyleItemList.length,
+                          itemBuilder: (context, index) {
+                            LifestyleItemModel model = provider
+                                .homeScreenOneModelObj.lifestyleItemList[index];
+                            return LifestyleItemWidget(
+                              model,
+                            );
+                          },
+                        );
+                      },
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
-      ),
+      
     );
   }
 }

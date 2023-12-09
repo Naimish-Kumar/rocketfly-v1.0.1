@@ -31,26 +31,27 @@ class SpendLearningScreenState extends State<SpendLearningScreen> {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             appBar: _buildAppBar(context),
             body: Container(
                 width: double.maxFinite,
                 padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 24.v),
-                child: Column(children: [
-                  Container(
-                      width: 325.h,
-                      margin: EdgeInsets.symmetric(horizontal: 8.h),
-                      child: Text("msg_how_much_time_do".tr,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.center,
-                          style: theme.textTheme.titleMedium!
-                              .copyWith(height: 1.50))),
-                  SizedBox(height: 29.v),
-                  _buildDuration(context)
-                ])),
-            bottomNavigationBar: _buildNext(context)));
+                child: SafeArea(
+                  child: Column(children: [
+                    Container(
+                        width: 325.h,
+                        margin: EdgeInsets.symmetric(horizontal: 8.h),
+                        child: Text("msg_how_much_time_do".tr,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            textAlign: TextAlign.center,
+                            style: theme.textTheme.titleMedium!
+                                .copyWith(height: 1.50))),
+                    SizedBox(height: 29.v),
+                    _buildDuration(context)
+                  ]),
+                )),
+            bottomNavigationBar: _buildNext(context));
   }
 
   /// Section Widget

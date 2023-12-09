@@ -28,27 +28,28 @@ class CurrencyScreenState extends State<CurrencyScreen> {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             appBar: _buildAppBar(context),
-            body: Padding(
-                padding: EdgeInsets.only(left: 9.h, top: 10.v, right: 12.h),
-                child: Consumer<CurrencyProvider>(
-                    builder: (context, provider, child) {
-                  return ListView.separated(
-                      physics: BouncingScrollPhysics(),
-                      shrinkWrap: true,
-                      separatorBuilder: (context, index) {
-                        return SizedBox(height: 20.v);
-                      },
-                      itemCount:
-                          provider.currencyModelObj.currencylistItemList.length,
-                      itemBuilder: (context, index) {
-                        CurrencylistItemModel model = provider
-                            .currencyModelObj.currencylistItemList[index];
-                        return CurrencylistItemWidget(model);
-                      });
-                }))));
+            body: SafeArea(
+              child: Padding(
+                  padding: EdgeInsets.only(left: 9.h, top: 10.v, right: 12.h),
+                  child: Consumer<CurrencyProvider>(
+                      builder: (context, provider, child) {
+                    return ListView.separated(
+                        physics: BouncingScrollPhysics(),
+                        shrinkWrap: true,
+                        separatorBuilder: (context, index) {
+                          return SizedBox(height: 20.v);
+                        },
+                        itemCount:
+                            provider.currencyModelObj.currencylistItemList.length,
+                        itemBuilder: (context, index) {
+                          CurrencylistItemModel model = provider
+                              .currencyModelObj.currencylistItemList[index];
+                          return CurrencylistItemWidget(model);
+                        });
+                  })),
+            ));
   }
 
   /// Section Widget

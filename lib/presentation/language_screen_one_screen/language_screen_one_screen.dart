@@ -29,28 +29,29 @@ class LanguageScreenOneScreenState extends State<LanguageScreenOneScreen> {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return  Scaffold(
             appBar: _buildAppBar(context),
-            body: Padding(
-                padding: EdgeInsets.only(left: 9.h, top: 11.v, right: 12.h),
-                child: Consumer<LanguageScreenOneProvider>(
-                    builder: (context, provider, child) {
-                  return ListView.separated(
-                      physics: BouncingScrollPhysics(),
-                      shrinkWrap: true,
-                      separatorBuilder: (context, index) {
-                        return SizedBox(height: 20.v);
-                      },
-                      itemCount: provider.languageScreenOneModelObj
-                          .languagelist1ItemList.length,
-                      itemBuilder: (context, index) {
-                        Languagelist1ItemModel model = provider
-                            .languageScreenOneModelObj
-                            .languagelist1ItemList[index];
-                        return Languagelist1ItemWidget(model);
-                      });
-                }))));
+            body: SafeArea(
+              child: Padding(
+                  padding: EdgeInsets.only(left: 9.h, top: 11.v, right: 12.h),
+                  child: Consumer<LanguageScreenOneProvider>(
+                      builder: (context, provider, child) {
+                    return ListView.separated(
+                        physics: BouncingScrollPhysics(),
+                        shrinkWrap: true,
+                        separatorBuilder: (context, index) {
+                          return SizedBox(height: 20.v);
+                        },
+                        itemCount: provider.languageScreenOneModelObj
+                            .languagelist1ItemList.length,
+                        itemBuilder: (context, index) {
+                          Languagelist1ItemModel model = provider
+                              .languageScreenOneModelObj
+                              .languagelist1ItemList[index];
+                          return Languagelist1ItemWidget(model);
+                        });
+                  })),
+            ));
   }
 
   /// Section Widget

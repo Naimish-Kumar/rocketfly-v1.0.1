@@ -33,58 +33,59 @@ class ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
-            resizeToAvoidBottomInset: false,
-            appBar: _buildAppBar(context),
-            body: Form(
-                key: _formKey,
-                child: Container(
-                    width: double.maxFinite,
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 16.h, vertical: 24.v),
-                    child: Column(children: [
-                      SizedBox(
-                          width: 343.h,
-                          child: Text("msg_enter_the_email2".tr,
-                              maxLines: 3,
-                              overflow: TextOverflow.ellipsis,
-                              textAlign: TextAlign.center,
-                              style: theme.textTheme.titleMedium!
-                                  .copyWith(height: 1.50))),
-                      SizedBox(height: 29.v),
-                      Selector<ForgetPasswordProvider, TextEditingController?>(
-                          selector: (context, provider) =>
-                              provider.passwordController,
-                          builder: (context, passwordController, child) {
-                            return CustomTextFormField(
-                                controller: passwordController,
-                                hintText: "lbl_email".tr,
-                                hintStyle: theme.textTheme.bodyLarge!,
-                                textInputAction: TextInputAction.done,
-                                textInputType: TextInputType.emailAddress,
-                                prefix: Container(
-                                    margin: EdgeInsets.all(12.h),
-                                    child: CustomImageView(
-                                        imagePath: ImageConstant.imgIcon26,
-                                        height: 24.adaptSize,
-                                        width: 24.adaptSize)),
-                                prefixConstraints:
-                                    BoxConstraints(maxHeight: 48.v),
-                                validator: (value) {
-                                  if (value == null ||
-                                      (!isValidEmail(value,
-                                          isRequired: true))) {
-                                    return "err_msg_please_enter_valid_email"
-                                        .tr;
-                                  }
-                                  return null;
-                                });
-                          }),
-                      SizedBox(height: 32.v),
-                      CustomElevatedButton(text: "msg_send_instructions".tr),
-                      SizedBox(height: 5.v)
-                    ])))));
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      appBar: _buildAppBar(context),
+      body: Form(
+        key: _formKey,
+        child: Container(
+          width: double.maxFinite,
+          padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 24.v),
+          child: SafeArea(
+            child: Column(children: [
+              SizedBox(
+                width: 343.h,
+                child: Text(
+                  "msg_enter_the_email2".tr,
+                  maxLines: 3,
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.center,
+                  style: theme.textTheme.titleMedium!.copyWith(height: 1.50),
+                ),
+              ),
+              SizedBox(height: 29.v),
+              Selector<ForgetPasswordProvider, TextEditingController?>(
+                  selector: (context, provider) => provider.passwordController,
+                  builder: (context, passwordController, child) {
+                    return CustomTextFormField(
+                        controller: passwordController,
+                        hintText: "lbl_email".tr,
+                        hintStyle: theme.textTheme.bodyLarge!,
+                        textInputAction: TextInputAction.done,
+                        textInputType: TextInputType.emailAddress,
+                        prefix: Container(
+                            margin: EdgeInsets.all(12.h),
+                            child: CustomImageView(
+                                imagePath: ImageConstant.imgIcon26,
+                                height: 24.adaptSize,
+                                width: 24.adaptSize)),
+                        prefixConstraints: BoxConstraints(maxHeight: 48.v),
+                        validator: (value) {
+                          if (value == null ||
+                              (!isValidEmail(value, isRequired: true))) {
+                            return "err_msg_please_enter_valid_email".tr;
+                          }
+                          return null;
+                        });
+                  }),
+              SizedBox(height: 32.v),
+              CustomElevatedButton(text: "msg_send_instructions".tr),
+              SizedBox(height: 5.v)
+            ]),
+          ),
+        ),
+      ),
+    );
   }
 
   /// Section Widget

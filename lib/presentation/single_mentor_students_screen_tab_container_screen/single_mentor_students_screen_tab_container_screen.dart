@@ -42,20 +42,21 @@ class SingleMentorStudentsScreenTabContainerScreenState
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             appBar: _buildAppBar(context),
             body: SizedBox(
                 width: double.maxFinite,
-                child: Column(children: [
-                  SizedBox(height: 22.v),
-                  _buildPlaceholderRow(context),
-                  SizedBox(height: 24.v),
-                  _buildStatesColumn(context),
-                  SizedBox(height: 25.v),
-                  _buildTabview(context),
-                  _buildTabBarView(context)
-                ]))));
+                child: SafeArea(
+                  child: Column(children: [
+                    SizedBox(height: 22.v),
+                    _buildPlaceholderRow(context),
+                    SizedBox(height: 24.v),
+                    _buildStatesColumn(context),
+                    SizedBox(height: 25.v),
+                    _buildTabview(context),
+                    _buildTabBarView(context)
+                  ]),
+                )));
   }
 
   /// Section Widget

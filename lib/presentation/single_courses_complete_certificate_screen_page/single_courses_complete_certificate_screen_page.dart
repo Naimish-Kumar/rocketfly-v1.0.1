@@ -37,37 +37,38 @@ class SingleCoursesCompleteCertificateScreenPageState
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
 
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         backgroundColor: theme.colorScheme.primary,
         body: Container(
           width: double.maxFinite,
           decoration: AppDecoration.fillPrimary,
-          child: Column(
-            children: [
-              SizedBox(height: 24.v),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.h),
-                child: Column(
-                  children: [
-                    CustomImageView(
-                      imagePath: ImageConstant.imgMaskGroup386x343,
-                      height: 386.v,
-                      width: 343.h,
-                    ),
-                    SizedBox(height: 32.v),
-                    CustomElevatedButton(
-                      text: "lbl_download".tr,
-                      buttonStyle: CustomButtonStyles.fillDeepPurpleA,
-                      buttonTextStyle: theme.textTheme.titleLarge!,
-                    ),
-                  ],
+          child: SafeArea(
+            child: Column(
+              children: [
+                SizedBox(height: 24.v),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.h),
+                  child: Column(
+                    children: [
+                      CustomImageView(
+                        imagePath: ImageConstant.imgMaskGroup386x343,
+                        height: 386.v,
+                        width: 343.h,
+                      ),
+                      SizedBox(height: 32.v),
+                      CustomElevatedButton(
+                        text: "lbl_download".tr,
+                        buttonStyle: CustomButtonStyles.fillDeepPurpleA,
+                        buttonTextStyle: theme.textTheme.titleLarge!,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
-      ),
+    
     );
   }
 }

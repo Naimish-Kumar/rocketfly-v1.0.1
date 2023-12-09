@@ -30,47 +30,48 @@ class ApplyCouponScreenState extends State<ApplyCouponScreen> {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             backgroundColor: theme.colorScheme.primary,
             resizeToAvoidBottomInset: false,
             appBar: _buildAppBar(context),
             body: Container(
                 width: double.maxFinite,
                 padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 22.v),
-                child: Column(children: [
-                  Selector<ApplyCouponProvider, TextEditingController?>(
-                      selector: (context, provider) =>
-                          provider.couponCodeController,
-                      builder: (context, couponCodeController, child) {
-                        return CustomTextFormField(
-                            controller: couponCodeController,
-                            hintText: "msg_enter_your_coupon".tr,
-                            hintStyle: CustomTextStyles.bodyLargeGray700,
-                            textInputAction: TextInputAction.done,
-                            prefix: Container(
-                                margin: EdgeInsets.all(12.h),
-                                child: CustomImageView(
-                                    imagePath: ImageConstant.imgIconPrimary,
-                                    height: 24.adaptSize,
-                                    width: 24.adaptSize)),
-                            prefixConstraints: BoxConstraints(maxHeight: 48.v),
-                            borderDecoration: TextFormFieldStyleHelper.fillGray,
-                            fillColor: appTheme.gray700);
-                      }),
-                  SizedBox(height: 32.v),
-                  CustomElevatedButton(
-                      text: "lbl_apply".tr,
-                      buttonStyle: CustomButtonStyles.fillDeepPurpleA,
-                      buttonTextStyle: theme.textTheme.titleLarge!),
-                  SizedBox(height: 32.v),
-                  Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text("msg_available_coupons".tr,
-                          style: CustomTextStyles.headlineSmallOnError_1)),
-                  SizedBox(height: 33.v),
-                  _buildMobileApplicationList(context)
-                ]))));
+                child: SafeArea(
+                  child: Column(children: [
+                    Selector<ApplyCouponProvider, TextEditingController?>(
+                        selector: (context, provider) =>
+                            provider.couponCodeController,
+                        builder: (context, couponCodeController, child) {
+                          return CustomTextFormField(
+                              controller: couponCodeController,
+                              hintText: "msg_enter_your_coupon".tr,
+                              hintStyle: CustomTextStyles.bodyLargeGray700,
+                              textInputAction: TextInputAction.done,
+                              prefix: Container(
+                                  margin: EdgeInsets.all(12.h),
+                                  child: CustomImageView(
+                                      imagePath: ImageConstant.imgIconPrimary,
+                                      height: 24.adaptSize,
+                                      width: 24.adaptSize)),
+                              prefixConstraints: BoxConstraints(maxHeight: 48.v),
+                              borderDecoration: TextFormFieldStyleHelper.fillGray,
+                              fillColor: appTheme.gray700);
+                        }),
+                    SizedBox(height: 32.v),
+                    CustomElevatedButton(
+                        text: "lbl_apply".tr,
+                        buttonStyle: CustomButtonStyles.fillDeepPurpleA,
+                        buttonTextStyle: theme.textTheme.titleLarge!),
+                    SizedBox(height: 32.v),
+                    Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text("msg_available_coupons".tr,
+                            style: CustomTextStyles.headlineSmallOnError_1)),
+                    SizedBox(height: 33.v),
+                    _buildMobileApplicationList(context)
+                  ]),
+                )));
   }
 
   /// Section Widget

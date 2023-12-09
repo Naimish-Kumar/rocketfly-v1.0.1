@@ -30,27 +30,28 @@ class SubscriptionNotSuccessfulScreenState
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             backgroundColor: theme.colorScheme.primary,
             appBar: _buildAppBar(context),
             body: Container(
                 width: double.maxFinite,
                 padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 22.v),
-                child: Column(children: [
-                  CustomImageView(
-                      imagePath: ImageConstant.imgMaskGroup12,
-                      height: 343.adaptSize,
-                      width: 343.adaptSize),
-                  SizedBox(height: 27.v),
-                  Text("msg_something_wrong".tr,
-                      style: CustomTextStyles.headlineLargeOnError_1),
-                  SizedBox(height: 22.v),
-                  Text("msg_please_try_again".tr,
-                      style: CustomTextStyles.titleMediumGray700_2),
-                  SizedBox(height: 5.v)
-                ])),
-            bottomNavigationBar: _buildTryAgain(context)));
+                child: SafeArea(
+                  child: Column(children: [
+                    CustomImageView(
+                        imagePath: ImageConstant.imgMaskGroup12,
+                        height: 343.adaptSize,
+                        width: 343.adaptSize),
+                    SizedBox(height: 27.v),
+                    Text("msg_something_wrong".tr,
+                        style: CustomTextStyles.headlineLargeOnError_1),
+                    SizedBox(height: 22.v),
+                    Text("msg_please_try_again".tr,
+                        style: CustomTextStyles.titleMediumGray700_2),
+                    SizedBox(height: 5.v)
+                  ]),
+                )),
+            bottomNavigationBar: _buildTryAgain(context));
   }
 
   /// Section Widget
@@ -68,7 +69,7 @@ class SubscriptionNotSuccessfulScreenState
                     }),
                 AppbarSubtitleTwo(
                     text: "lbl_alert".tr,
-                    margin: EdgeInsets.only(left: 128.h, bottom: 4.v))
+                    margin: EdgeInsets.only(left: 128.h, bottom: 4.v),)
               ])),
           SizedBox(height: 10.v),
           Opacity(
@@ -77,7 +78,7 @@ class SubscriptionNotSuccessfulScreenState
                   alignment: Alignment.centerLeft,
                   child: SizedBox(
                       width: double.maxFinite,
-                      child: Divider(color: theme.colorScheme.onError))))
+                      child: Divider(color: theme.colorScheme.onError),),),)
         ]),
         styleType: Style.bgFill);
   }

@@ -29,74 +29,75 @@ class CheckoutScreenState extends State<CheckoutScreen> {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             resizeToAvoidBottomInset: false,
             body: SizedBox(
                 height: 768.v,
                 width: double.maxFinite,
-                child: Stack(alignment: Alignment.topCenter, children: [
-                  Align(
-                      alignment: Alignment.center,
-                      child: Container(
-                          padding: EdgeInsets.symmetric(vertical: 10.v),
-                          child:
-                              Column(mainAxisSize: MainAxisSize.min, children: [
-                            _buildAppBar(context),
-                            SizedBox(height: 32.v),
-                            _buildDesign(context),
-                            SizedBox(height: 23.v),
-                            Opacity(
-                                opacity: 0.08,
-                                child: Divider(indent: 16.h, endIndent: 16.h)),
-                            Spacer(),
-                            Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 16.h),
-                                child: _buildPaymentMethod(context,
-                                    paymentMethod: "lbl_apply_coupon".tr,
-                                    addText: "lbl_add".tr)),
-                            SizedBox(height: 16.v),
-                            Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 16.h),
-                                child: Selector<CheckoutProvider,
-                                        TextEditingController?>(
-                                    selector: (context, provider) =>
-                                        provider.couponCodeController,
-                                    builder:
-                                        (context, couponCodeController, child) {
-                                      return CustomTextFormField(
-                                          controller: couponCodeController,
-                                          hintText: "msg_enter_your_coupon".tr,
-                                          hintStyle: theme.textTheme.bodyLarge!,
-                                          textInputAction: TextInputAction.done,
-                                          prefix: Container(
-                                              margin: EdgeInsets.all(12.h),
-                                              child: CustomImageView(
-                                                  imagePath: ImageConstant
-                                                      .imgIconOnprimarycontainer,
-                                                  height: 24.adaptSize,
-                                                  width: 24.adaptSize)),
-                                          prefixConstraints:
-                                              BoxConstraints(maxHeight: 48.v));
-                                    })),
-                            SizedBox(height: 31.v),
-                            Align(
-                                alignment: Alignment.centerLeft,
-                                child: Padding(
-                                    padding: EdgeInsets.only(left: 16.h),
-                                    child: Text("lbl_price".tr,
-                                        style: CustomTextStyles
-                                            .titleMediumLeagueSpartanPrimary))),
-                            SizedBox(height: 7.v),
-                            _buildShape(context),
-                            SizedBox(height: 39.v),
-                            CustomElevatedButton(
-                                text: "lbl_pay_now".tr,
-                                margin: EdgeInsets.symmetric(horizontal: 16.h)),
-                            SizedBox(height: 40.v)
-                          ]))),
-                  _buildPaymentMethod2(context)
-                ]))));
+                child: SafeArea(
+                  child: Stack(alignment: Alignment.topCenter, children: [
+                    Align(
+                        alignment: Alignment.center,
+                        child: Container(
+                            padding: EdgeInsets.symmetric(vertical: 10.v),
+                            child:
+                                Column(mainAxisSize: MainAxisSize.min, children: [
+                              _buildAppBar(context),
+                              SizedBox(height: 32.v),
+                              _buildDesign(context),
+                              SizedBox(height: 23.v),
+                              Opacity(
+                                  opacity: 0.08,
+                                  child: Divider(indent: 16.h, endIndent: 16.h)),
+                              Spacer(),
+                              Padding(
+                                  padding: EdgeInsets.symmetric(horizontal: 16.h),
+                                  child: _buildPaymentMethod(context,
+                                      paymentMethod: "lbl_apply_coupon".tr,
+                                      addText: "lbl_add".tr)),
+                              SizedBox(height: 16.v),
+                              Padding(
+                                  padding: EdgeInsets.symmetric(horizontal: 16.h),
+                                  child: Selector<CheckoutProvider,
+                                          TextEditingController?>(
+                                      selector: (context, provider) =>
+                                          provider.couponCodeController,
+                                      builder:
+                                          (context, couponCodeController, child) {
+                                        return CustomTextFormField(
+                                            controller: couponCodeController,
+                                            hintText: "msg_enter_your_coupon".tr,
+                                            hintStyle: theme.textTheme.bodyLarge!,
+                                            textInputAction: TextInputAction.done,
+                                            prefix: Container(
+                                                margin: EdgeInsets.all(12.h),
+                                                child: CustomImageView(
+                                                    imagePath: ImageConstant
+                                                        .imgIconOnprimarycontainer,
+                                                    height: 24.adaptSize,
+                                                    width: 24.adaptSize)),
+                                            prefixConstraints:
+                                                BoxConstraints(maxHeight: 48.v));
+                                      })),
+                              SizedBox(height: 31.v),
+                              Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Padding(
+                                      padding: EdgeInsets.only(left: 16.h),
+                                      child: Text("lbl_price".tr,
+                                          style: CustomTextStyles
+                                              .titleMediumLeagueSpartanPrimary))),
+                              SizedBox(height: 7.v),
+                              _buildShape(context),
+                              SizedBox(height: 39.v),
+                              CustomElevatedButton(
+                                  text: "lbl_pay_now".tr,
+                                  margin: EdgeInsets.symmetric(horizontal: 16.h)),
+                              SizedBox(height: 40.v)
+                            ]))),
+                    _buildPaymentMethod2(context)
+                  ]),
+                )));
   }
 
   /// Section Widget

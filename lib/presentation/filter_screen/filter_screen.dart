@@ -30,57 +30,58 @@ class FilterScreenState extends State<FilterScreen> {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             backgroundColor: theme.colorScheme.primary,
             appBar: _buildAppBar(context),
             body: SizedBox(
                 width: double.maxFinite,
-                child: Column(children: [
-                  SizedBox(height: 23.v),
-                  Expanded(
-                      child: SingleChildScrollView(
-                          child: Padding(
-                              padding: EdgeInsets.only(
-                                  left: 16.h, right: 122.h, bottom: 5.v),
-                              child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    _buildCategoriesSectionList(context),
-                                    SizedBox(height: 10.v),
-                                    Padding(
-                                        padding: EdgeInsets.only(right: 56.h),
-                                        child: Row(children: [
-                                          CustomImageView(
-                                              imagePath: ImageConstant
-                                                  .imgIconPrimary24x24,
-                                              height: 22.v,
-                                              width: 24.h),
-                                          Padding(
-                                              padding: EdgeInsets.only(
-                                                  left: 12.h, top: 2.v),
-                                              child: Text(
-                                                  "msg_intermediate_2_856".tr,
-                                                  style: CustomTextStyles
-                                                      .titleMediumGray700_2))
-                                        ])),
-                                    SizedBox(height: 11.v),
-                                    Row(children: [
-                                      CustomImageView(
-                                          imagePath:
-                                              ImageConstant.imgIconPrimary24x24,
-                                          height: 22.v,
-                                          width: 24.h),
+                child: SafeArea(
+                  child: Column(children: [
+                    SizedBox(height: 23.v),
+                    Expanded(
+                        child: SingleChildScrollView(
+                            child: Padding(
+                                padding: EdgeInsets.only(
+                                    left: 16.h, right: 122.h, bottom: 5.v),
+                                child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      _buildCategoriesSectionList(context),
+                                      SizedBox(height: 10.v),
                                       Padding(
-                                          padding: EdgeInsets.only(
-                                              left: 12.h, top: 3.v),
-                                          child: Text("lbl_expert_2_789".tr,
-                                              style: CustomTextStyles
-                                                  .titleMediumGray700_2))
-                                    ])
-                                  ]))))
-                ])),
-            bottomNavigationBar: _buildNinetySixRow(context)));
+                                          padding: EdgeInsets.only(right: 56.h),
+                                          child: Row(children: [
+                                            CustomImageView(
+                                                imagePath: ImageConstant
+                                                    .imgIconPrimary24x24,
+                                                height: 22.v,
+                                                width: 24.h),
+                                            Padding(
+                                                padding: EdgeInsets.only(
+                                                    left: 12.h, top: 2.v),
+                                                child: Text(
+                                                    "msg_intermediate_2_856".tr,
+                                                    style: CustomTextStyles
+                                                        .titleMediumGray700_2))
+                                          ])),
+                                      SizedBox(height: 11.v),
+                                      Row(children: [
+                                        CustomImageView(
+                                            imagePath:
+                                                ImageConstant.imgIconPrimary24x24,
+                                            height: 22.v,
+                                            width: 24.h),
+                                        Padding(
+                                            padding: EdgeInsets.only(
+                                                left: 12.h, top: 3.v),
+                                            child: Text("lbl_expert_2_789".tr,
+                                                style: CustomTextStyles
+                                                    .titleMediumGray700_2))
+                                      ])
+                                    ]))))
+                  ]),
+                )),
+            bottomNavigationBar: _buildNinetySixRow(context));
   }
 
   /// Section Widget

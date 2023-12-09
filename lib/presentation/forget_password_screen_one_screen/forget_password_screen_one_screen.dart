@@ -35,8 +35,7 @@ class ForgetPasswordScreenOneScreenState
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         backgroundColor: theme.colorScheme.primary,
         resizeToAvoidBottomInset: false,
         appBar: _buildAppBar(context),
@@ -45,58 +44,59 @@ class ForgetPasswordScreenOneScreenState
           child: Container(
             width: double.maxFinite,
             padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 24.v),
-            child: Column(children: [
-              Container(
-                  width: 331.h,
-                  margin: EdgeInsets.only(left: 6.h, right: 5.h),
-                  child: Text("msg_enter_the_email".tr,
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
-                      textAlign: TextAlign.center,
-                      style: CustomTextStyles.titleMediumGray700_2
-                          .copyWith(height: 1.50))),
-              SizedBox(height: 29.v),
-              Selector<ForgetPasswordScreenOneProvider, TextEditingController?>(
-                  selector: (context, provider) => provider.passwordController,
-                  builder: (context, passwordController, child) {
-                    return CustomTextFormField(
-                        controller: passwordController,
-                        hintText: "lbl_email".tr,
-                        hintStyle: CustomTextStyles.bodyLargeGray700,
-                        textInputAction: TextInputAction.done,
-                        textInputType: TextInputType.emailAddress,
-                        prefix: Container(
-                            margin: EdgeInsets.all(12.h),
-                            child: CustomImageView(
-                                imagePath: ImageConstant.imgIconOnerror24x24,
-                                height: 24.adaptSize,
-                                width: 24.adaptSize)),
-                        prefixConstraints: BoxConstraints(maxHeight: 48.v),
-                        validator: (value) {
-                          if (value == null ||
-                              (!isValidEmail(value, isRequired: true))) {
-                            return "err_msg_please_enter_valid_email".tr;
-                          }
-                          return null;
-                        },
-                        borderDecoration: TextFormFieldStyleHelper.fillGray,
-                        fillColor: appTheme.gray700);
-                  }),
-              SizedBox(height: 32.v),
-              CustomElevatedButton(
-                onPressed: (){
-                  if(_formKey.currentState!.validate()){
-                    Navigator.pushNamed(context,AppRoutes.verifyPhoneNumberScreenOneScreen);
-                  }
-                },
-                  text: "lbl_send_email".tr,
-                  buttonStyle: CustomButtonStyles.fillDeepPurpleA,
-                  buttonTextStyle: theme.textTheme.titleLarge!),
-              SizedBox(height: 5.v)
-            ]),
+            child: SafeArea(
+              child: Column(children: [
+                Container(
+                    width: 331.h,
+                    margin: EdgeInsets.only(left: 6.h, right: 5.h),
+                    child: Text("msg_enter_the_email".tr,
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                        textAlign: TextAlign.center,
+                        style: CustomTextStyles.titleMediumGray700_2
+                            .copyWith(height: 1.50))),
+                SizedBox(height: 29.v),
+                Selector<ForgetPasswordScreenOneProvider, TextEditingController?>(
+                    selector: (context, provider) => provider.passwordController,
+                    builder: (context, passwordController, child) {
+                      return CustomTextFormField(
+                          controller: passwordController,
+                          hintText: "lbl_email".tr,
+                          hintStyle: CustomTextStyles.bodyLargeGray700,
+                          textInputAction: TextInputAction.done,
+                          textInputType: TextInputType.emailAddress,
+                          prefix: Container(
+                              margin: EdgeInsets.all(12.h),
+                              child: CustomImageView(
+                                  imagePath: ImageConstant.imgIconOnerror24x24,
+                                  height: 24.adaptSize,
+                                  width: 24.adaptSize)),
+                          prefixConstraints: BoxConstraints(maxHeight: 48.v),
+                          validator: (value) {
+                            if (value == null ||
+                                (!isValidEmail(value, isRequired: true))) {
+                              return "err_msg_please_enter_valid_email".tr;
+                            }
+                            return null;
+                          },
+                          borderDecoration: TextFormFieldStyleHelper.fillGray,
+                          fillColor: appTheme.gray700);
+                    }),
+                SizedBox(height: 32.v),
+                CustomElevatedButton(
+                  onPressed: (){
+                    if(_formKey.currentState!.validate()){
+                      Navigator.pushNamed(context,AppRoutes.verifyPhoneNumberScreenOneScreen);
+                    }
+                  },
+                    text: "lbl_send_email".tr,
+                    buttonStyle: CustomButtonStyles.fillDeepPurpleA,
+                    buttonTextStyle: theme.textTheme.titleLarge!),
+                SizedBox(height: 5.v)
+              ]),
+            ),
           ),
         ),
-      ),
     );
   }
 

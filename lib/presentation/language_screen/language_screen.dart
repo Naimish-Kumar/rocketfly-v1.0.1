@@ -28,28 +28,29 @@ class LanguageScreenState extends State<LanguageScreen> {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             backgroundColor: theme.colorScheme.primary,
             appBar: _buildAppBar(context),
-            body: Padding(
-                padding: EdgeInsets.only(left: 16.h, top: 22.v, right: 16.h),
-                child: Consumer<LanguageProvider>(
-                    builder: (context, provider, child) {
-                  return ListView.separated(
-                      physics: BouncingScrollPhysics(),
-                      shrinkWrap: true,
-                      separatorBuilder: (context, index) {
-                        return SizedBox(height: 9.v);
-                      },
-                      itemCount:
-                          provider.languageModelObj.languagelistItemList.length,
-                      itemBuilder: (context, index) {
-                        LanguagelistItemModel model = provider
-                            .languageModelObj.languagelistItemList[index];
-                        return LanguagelistItemWidget(model);
-                      });
-                }))));
+            body: SafeArea(
+              child: Padding(
+                  padding: EdgeInsets.only(left: 16.h, top: 22.v, right: 16.h),
+                  child: Consumer<LanguageProvider>(
+                      builder: (context, provider, child) {
+                    return ListView.separated(
+                        physics: BouncingScrollPhysics(),
+                        shrinkWrap: true,
+                        separatorBuilder: (context, index) {
+                          return SizedBox(height: 9.v);
+                        },
+                        itemCount:
+                            provider.languageModelObj.languagelistItemList.length,
+                        itemBuilder: (context, index) {
+                          LanguagelistItemModel model = provider
+                              .languageModelObj.languagelistItemList[index];
+                          return LanguagelistItemWidget(model);
+                        });
+                  })),
+            ));
   }
 
   /// Section Widget

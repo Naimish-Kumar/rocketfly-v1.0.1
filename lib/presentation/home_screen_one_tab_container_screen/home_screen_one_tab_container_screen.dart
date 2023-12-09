@@ -54,27 +54,28 @@ class HomeScreenOneTabContainerScreenState
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
 
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: _buildAppBar(context),
         body: SizedBox(
           height: 2145.v,
           width: double.maxFinite,
-          child: Stack(
-            alignment: Alignment.bottomCenter,
-            children: [
-              _buildHeyJesica(context),
-              _buildAllCourses(context),
-              _buildNewRelease1(context),
-              _buildTopMentors(context),
-              _buildCategories(context),
-              _buildHomeScreenOne(context),
-            ],
+          child: SafeArea(
+            child: Stack(
+              alignment: Alignment.bottomCenter,
+              children: [
+                _buildHeyJesica(context),
+                _buildAllCourses(context),
+                _buildNewRelease1(context),
+                _buildTopMentors(context),
+                _buildCategories(context),
+                _buildHomeScreenOne(context),
+              ],
+            ),
           ),
         ),
         bottomNavigationBar: _buildBottomBar(context),
-      ),
+      
     );
   }
 

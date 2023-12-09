@@ -37,30 +37,30 @@ class SingleCoursesCompleteCertificateScreenOnePageState
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
 
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         body: Container(
           width: double.maxFinite,
           decoration: AppDecoration.fillOnPrimaryContainer,
-          child: Column(
-            children: [
-              SizedBox(height: 24.v),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.h),
-                child: Column(
-                  children: [
-                    _buildImagePlaceholder(context),
-                    SizedBox(height: 32.v),
-                    CustomElevatedButton(
-                      text: "lbl_download".tr,
-                    ),
-                  ],
+          child: SafeArea(
+            child: Column(
+              children: [
+                SizedBox(height: 24.v),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.h),
+                  child: Column(
+                    children: [
+                      _buildImagePlaceholder(context),
+                      SizedBox(height: 32.v),
+                      CustomElevatedButton(
+                        text: "lbl_download".tr,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
-      ),
     );
   }
 

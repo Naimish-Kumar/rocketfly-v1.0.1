@@ -31,8 +31,7 @@ class TrendingCoursesScreenOneScreenState
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             appBar: _buildAppBar(context),
             body: SizedBox(
                 width: mediaQueryData.size.width,
@@ -41,27 +40,29 @@ class TrendingCoursesScreenOneScreenState
                     child: Padding(
                         padding: EdgeInsets.only(
                             left: 16.h, right: 16.h, bottom: 5.v),
-                        child: Column(children: [
-                          _buildDesignStack(context),
-                          SizedBox(height: 13.v),
-                          _buildIconStack(context),
-                          SizedBox(height: 15.v),
-                          _buildDevelopmentStack(context),
-                          SizedBox(height: 13.v),
-                          _buildIconStack1(context),
-                          SizedBox(height: 15.v),
-                          _buildFitnessStack(context),
-                          SizedBox(height: 13.v),
-                          _buildIconStack2(context),
-                          SizedBox(height: 15.v),
-                          _buildLifestyleStack(context),
-                          SizedBox(height: 13.v),
-                          _buildIconStack3(context),
-                          SizedBox(height: 15.v),
-                          _buildMusicStack(context),
-                          SizedBox(height: 12.v),
-                          _buildTheProfessionalRow(context)
-                        ]))))));
+                        child: SafeArea(
+                          child: Column(children: [
+                            _buildDesignStack(context),
+                            SizedBox(height: 13.v),
+                            _buildIconStack(context),
+                            SizedBox(height: 15.v),
+                            _buildDevelopmentStack(context),
+                            SizedBox(height: 13.v),
+                            _buildIconStack1(context),
+                            SizedBox(height: 15.v),
+                            _buildFitnessStack(context),
+                            SizedBox(height: 13.v),
+                            _buildIconStack2(context),
+                            SizedBox(height: 15.v),
+                            _buildLifestyleStack(context),
+                            SizedBox(height: 13.v),
+                            _buildIconStack3(context),
+                            SizedBox(height: 15.v),
+                            _buildMusicStack(context),
+                            SizedBox(height: 12.v),
+                            _buildTheProfessionalRow(context)
+                          ]),
+                        )))));
   }
 
   /// Section Widget

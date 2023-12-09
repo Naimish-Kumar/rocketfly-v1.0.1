@@ -27,24 +27,25 @@ class AboutUsScreenOneScreenState extends State<AboutUsScreenOneScreen> {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             appBar: _buildAppBar(context),
             body: Container(
                 width: double.maxFinite,
                 padding: EdgeInsets.symmetric(horizontal: 15.h, vertical: 22.v),
-                child: Column(children: [
-                  SizedBox(
-                      width: 342.h,
-                      child: Text("msg_egestas_nunc_neque".tr,
-                          maxLines: 23,
-                          overflow: TextOverflow.ellipsis,
-                          style: CustomTextStyles.bodyLarge16
-                              .copyWith(height: 1.25))),
-                  SizedBox(height: 21.v),
-                  _buildSocialMedia(context),
-                  SizedBox(height: 5.v)
-                ]))));
+                child: SafeArea(
+                  child: Column(children: [
+                    SizedBox(
+                        width: 342.h,
+                        child: Text("msg_egestas_nunc_neque".tr,
+                            maxLines: 23,
+                            overflow: TextOverflow.ellipsis,
+                            style: CustomTextStyles.bodyLarge16
+                                .copyWith(height: 1.25))),
+                    SizedBox(height: 21.v),
+                    _buildSocialMedia(context),
+                    SizedBox(height: 5.v)
+                  ]),
+                )));
   }
 
   /// Section Widget

@@ -30,322 +30,323 @@ class FilterScreenOneScreenState extends State<FilterScreenOneScreen> {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             appBar: _buildAppBar(context),
             body: SizedBox(
                 width: double.maxFinite,
-                child: Column(children: [
-                  SizedBox(height: 23.v),
-                  Expanded(
-                      child: SingleChildScrollView(
-                          child: Padding(
-                              padding: EdgeInsets.only(
-                                  left: 16.h, right: 122.h, bottom: 5.v),
-                              child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text("lbl_categories2".tr,
-                                        style: theme.textTheme.headlineSmall),
-                                    SizedBox(height: 15.v),
-                                    Row(children: [
-                                      CustomImageView(
-                                          imagePath: ImageConstant.imgIcon30,
-                                          height: 24.adaptSize,
-                                          width: 24.adaptSize),
+                child: SafeArea(
+                  child: Column(children: [
+                    SizedBox(height: 23.v),
+                    Expanded(
+                        child: SingleChildScrollView(
+                            child: Padding(
+                                padding: EdgeInsets.only(
+                                    left: 16.h, right: 122.h, bottom: 5.v),
+                                child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text("lbl_categories2".tr,
+                                          style: theme.textTheme.headlineSmall),
+                                      SizedBox(height: 15.v),
+                                      Row(children: [
+                                        CustomImageView(
+                                            imagePath: ImageConstant.imgIcon30,
+                                            height: 24.adaptSize,
+                                            width: 24.adaptSize),
+                                        Padding(
+                                            padding: EdgeInsets.only(
+                                                left: 12.h, top: 2.v),
+                                            child: Text("msg_business_2_315".tr,
+                                                style:
+                                                    theme.textTheme.titleMedium))
+                                      ]),
+                                      SizedBox(height: 12.v),
+                                      Row(children: [
+                                        CustomImageView(
+                                            imagePath: ImageConstant.imgIcon30,
+                                            height: 24.adaptSize,
+                                            width: 24.adaptSize),
+                                        Padding(
+                                            padding: EdgeInsets.only(
+                                                left: 12.h, top: 2.v),
+                                            child: Text("lbl_science_356".tr,
+                                                style:
+                                                    theme.textTheme.titleMedium))
+                                      ]),
+                                      SizedBox(height: 12.v),
                                       Padding(
-                                          padding: EdgeInsets.only(
-                                              left: 12.h, top: 2.v),
-                                          child: Text("msg_business_2_315".tr,
-                                              style:
-                                                  theme.textTheme.titleMedium))
-                                    ]),
-                                    SizedBox(height: 12.v),
-                                    Row(children: [
-                                      CustomImageView(
-                                          imagePath: ImageConstant.imgIcon30,
-                                          height: 24.adaptSize,
-                                          width: 24.adaptSize),
+                                          padding: EdgeInsets.only(right: 51.h),
+                                          child: Row(children: [
+                                            CustomImageView(
+                                                imagePath:
+                                                    ImageConstant.imgIcon30,
+                                                height: 24.adaptSize,
+                                                width: 24.adaptSize),
+                                            Padding(
+                                                padding: EdgeInsets.only(
+                                                    left: 12.h, top: 3.v),
+                                                child: Text(
+                                                    "msg_development_1_856".tr,
+                                                    style: theme
+                                                        .textTheme.titleMedium))
+                                          ])),
+                                      SizedBox(height: 12.v),
                                       Padding(
-                                          padding: EdgeInsets.only(
-                                              left: 12.h, top: 2.v),
-                                          child: Text("lbl_science_356".tr,
-                                              style:
-                                                  theme.textTheme.titleMedium))
-                                    ]),
-                                    SizedBox(height: 12.v),
-                                    Padding(
-                                        padding: EdgeInsets.only(right: 51.h),
-                                        child: Row(children: [
-                                          CustomImageView(
-                                              imagePath:
-                                                  ImageConstant.imgIcon30,
-                                              height: 24.adaptSize,
-                                              width: 24.adaptSize),
-                                          Padding(
-                                              padding: EdgeInsets.only(
-                                                  left: 12.h, top: 3.v),
-                                              child: Text(
-                                                  "msg_development_1_856".tr,
-                                                  style: theme
-                                                      .textTheme.titleMedium))
-                                        ])),
-                                    SizedBox(height: 12.v),
-                                    Padding(
-                                        padding: EdgeInsets.only(right: 5.h),
-                                        child: Row(children: [
-                                          CustomImageView(
-                                              imagePath:
-                                                  ImageConstant.imgIcon30,
-                                              height: 24.adaptSize,
-                                              width: 24.adaptSize),
-                                          Padding(
-                                              padding: EdgeInsets.only(
-                                                  left: 12.h, top: 3.v),
-                                              child: Text(
-                                                  "msg_finance_accounting2".tr,
-                                                  style: theme
-                                                      .textTheme.titleMedium))
-                                        ])),
-                                    SizedBox(height: 12.v),
-                                    Padding(
-                                        padding: EdgeInsets.only(right: 50.h),
-                                        child: Row(children: [
-                                          CustomImageView(
-                                              imagePath:
-                                                  ImageConstant.imgIcon30,
-                                              height: 24.adaptSize,
-                                              width: 24.adaptSize),
-                                          Padding(
-                                              padding: EdgeInsets.only(
-                                                  left: 12.h, top: 2.v),
-                                              child: Text(
-                                                  "msg_it_software_2_315".tr,
-                                                  style: theme
-                                                      .textTheme.titleMedium))
-                                        ])),
-                                    SizedBox(height: 12.v),
-                                    Padding(
-                                        padding: EdgeInsets.only(right: 26.h),
-                                        child: Row(children: [
-                                          CustomImageView(
-                                              imagePath:
-                                                  ImageConstant.imgIcon30,
-                                              height: 24.adaptSize,
-                                              width: 24.adaptSize),
-                                          Padding(
-                                              padding: EdgeInsets.only(
-                                                  left: 12.h, top: 3.v),
-                                              child: Text(
-                                                  "msg_office_productivity2".tr,
-                                                  style: theme
-                                                      .textTheme.titleMedium))
-                                        ])),
-                                    SizedBox(height: 12.v),
-                                    Row(children: [
-                                      CustomImageView(
-                                          imagePath: ImageConstant.imgIcon30,
-                                          height: 24.adaptSize,
-                                          width: 24.adaptSize),
+                                          padding: EdgeInsets.only(right: 5.h),
+                                          child: Row(children: [
+                                            CustomImageView(
+                                                imagePath:
+                                                    ImageConstant.imgIcon30,
+                                                height: 24.adaptSize,
+                                                width: 24.adaptSize),
+                                            Padding(
+                                                padding: EdgeInsets.only(
+                                                    left: 12.h, top: 3.v),
+                                                child: Text(
+                                                    "msg_finance_accounting2".tr,
+                                                    style: theme
+                                                        .textTheme.titleMedium))
+                                          ])),
+                                      SizedBox(height: 12.v),
                                       Padding(
-                                          padding: EdgeInsets.only(
-                                              left: 12.h, top: 3.v),
-                                          child: Text(
-                                              "msg_personal_development2".tr,
-                                              style:
-                                                  theme.textTheme.titleMedium))
-                                    ]),
-                                    SizedBox(height: 12.v),
-                                    Row(children: [
-                                      CustomImageView(
-                                          imagePath: ImageConstant.imgIcon31,
-                                          height: 24.adaptSize,
-                                          width: 24.adaptSize),
+                                          padding: EdgeInsets.only(right: 50.h),
+                                          child: Row(children: [
+                                            CustomImageView(
+                                                imagePath:
+                                                    ImageConstant.imgIcon30,
+                                                height: 24.adaptSize,
+                                                width: 24.adaptSize),
+                                            Padding(
+                                                padding: EdgeInsets.only(
+                                                    left: 12.h, top: 2.v),
+                                                child: Text(
+                                                    "msg_it_software_2_315".tr,
+                                                    style: theme
+                                                        .textTheme.titleMedium))
+                                          ])),
+                                      SizedBox(height: 12.v),
                                       Padding(
-                                          padding: EdgeInsets.only(
-                                              left: 12.h, top: 3.v),
-                                          child: Text("lbl_design_3_386".tr,
-                                              style: CustomTextStyles
-                                                  .titleMediumPrimary_1))
-                                    ]),
-                                    SizedBox(height: 12.v),
-                                    _buildC17Hours(context,
-                                        duration: "msg_marketing_1_815".tr),
-                                    SizedBox(height: 12.v),
-                                    _buildExpert(context,
-                                        userName: "lbl_lifestyle_923".tr),
-                                    SizedBox(height: 12.v),
-                                    Padding(
-                                        padding: EdgeInsets.only(right: 9.h),
-                                        child: Row(children: [
-                                          CustomImageView(
-                                              imagePath:
-                                                  ImageConstant.imgIcon30,
-                                              height: 24.adaptSize,
-                                              width: 24.adaptSize),
-                                          Padding(
-                                              padding: EdgeInsets.only(
-                                                  left: 12.h, top: 3.v),
-                                              child: Text(
-                                                  "msg_photography_video2".tr,
-                                                  style: theme
-                                                      .textTheme.titleMedium))
-                                        ])),
-                                    SizedBox(height: 12.v),
-                                    Padding(
-                                        padding: EdgeInsets.only(right: 42.h),
-                                        child: Row(children: [
-                                          CustomImageView(
-                                              imagePath:
-                                                  ImageConstant.imgIcon30,
-                                              height: 24.adaptSize,
-                                              width: 24.adaptSize),
-                                          Padding(
-                                              padding: EdgeInsets.only(
-                                                  left: 12.h, top: 2.v),
-                                              child: Text(
-                                                  "msg_health_fitness2".tr,
-                                                  style: theme
-                                                      .textTheme.titleMedium))
-                                        ])),
-                                    SizedBox(height: 12.v),
-                                    Row(children: [
-                                      CustomImageView(
-                                          imagePath: ImageConstant.imgIcon30,
-                                          height: 24.adaptSize,
-                                          width: 24.adaptSize),
+                                          padding: EdgeInsets.only(right: 26.h),
+                                          child: Row(children: [
+                                            CustomImageView(
+                                                imagePath:
+                                                    ImageConstant.imgIcon30,
+                                                height: 24.adaptSize,
+                                                width: 24.adaptSize),
+                                            Padding(
+                                                padding: EdgeInsets.only(
+                                                    left: 12.h, top: 3.v),
+                                                child: Text(
+                                                    "msg_office_productivity2".tr,
+                                                    style: theme
+                                                        .textTheme.titleMedium))
+                                          ])),
+                                      SizedBox(height: 12.v),
+                                      Row(children: [
+                                        CustomImageView(
+                                            imagePath: ImageConstant.imgIcon30,
+                                            height: 24.adaptSize,
+                                            width: 24.adaptSize),
+                                        Padding(
+                                            padding: EdgeInsets.only(
+                                                left: 12.h, top: 3.v),
+                                            child: Text(
+                                                "msg_personal_development2".tr,
+                                                style:
+                                                    theme.textTheme.titleMedium))
+                                      ]),
+                                      SizedBox(height: 12.v),
+                                      Row(children: [
+                                        CustomImageView(
+                                            imagePath: ImageConstant.imgIcon31,
+                                            height: 24.adaptSize,
+                                            width: 24.adaptSize),
+                                        Padding(
+                                            padding: EdgeInsets.only(
+                                                left: 12.h, top: 3.v),
+                                            child: Text("lbl_design_3_386".tr,
+                                                style: CustomTextStyles
+                                                    .titleMediumPrimary_1))
+                                      ]),
+                                      SizedBox(height: 12.v),
+                                      _buildC17Hours(context,
+                                          duration: "msg_marketing_1_815".tr),
+                                      SizedBox(height: 12.v),
+                                      _buildExpert(context,
+                                          userName: "lbl_lifestyle_923".tr),
+                                      SizedBox(height: 12.v),
                                       Padding(
-                                          padding: EdgeInsets.only(
-                                              left: 12.h, top: 2.v),
-                                          child: Text("lbl_music_1_315".tr,
-                                              style:
-                                                  theme.textTheme.titleMedium))
-                                    ]),
-                                    SizedBox(height: 12.v),
-                                    Row(children: [
-                                      CustomImageView(
-                                          imagePath: ImageConstant.imgIcon30,
-                                          height: 24.adaptSize,
-                                          width: 24.adaptSize),
+                                          padding: EdgeInsets.only(right: 9.h),
+                                          child: Row(children: [
+                                            CustomImageView(
+                                                imagePath:
+                                                    ImageConstant.imgIcon30,
+                                                height: 24.adaptSize,
+                                                width: 24.adaptSize),
+                                            Padding(
+                                                padding: EdgeInsets.only(
+                                                    left: 12.h, top: 3.v),
+                                                child: Text(
+                                                    "msg_photography_video2".tr,
+                                                    style: theme
+                                                        .textTheme.titleMedium))
+                                          ])),
+                                      SizedBox(height: 12.v),
                                       Padding(
-                                          padding: EdgeInsets.only(
-                                              left: 12.h, top: 3.v),
-                                          child: Text(
-                                              "msg_teaching_academics2".tr,
-                                              style:
-                                                  theme.textTheme.titleMedium))
-                                    ]),
-                                    SizedBox(height: 30.v),
-                                    Text("lbl_level".tr,
-                                        style: theme.textTheme.headlineSmall),
-                                    SizedBox(height: 18.v),
-                                    Row(children: [
-                                      CustomImageView(
-                                          imagePath: ImageConstant.imgIcon30,
-                                          height: 24.adaptSize,
-                                          width: 24.adaptSize),
+                                          padding: EdgeInsets.only(right: 42.h),
+                                          child: Row(children: [
+                                            CustomImageView(
+                                                imagePath:
+                                                    ImageConstant.imgIcon30,
+                                                height: 24.adaptSize,
+                                                width: 24.adaptSize),
+                                            Padding(
+                                                padding: EdgeInsets.only(
+                                                    left: 12.h, top: 2.v),
+                                                child: Text(
+                                                    "msg_health_fitness2".tr,
+                                                    style: theme
+                                                        .textTheme.titleMedium))
+                                          ])),
+                                      SizedBox(height: 12.v),
+                                      Row(children: [
+                                        CustomImageView(
+                                            imagePath: ImageConstant.imgIcon30,
+                                            height: 24.adaptSize,
+                                            width: 24.adaptSize),
+                                        Padding(
+                                            padding: EdgeInsets.only(
+                                                left: 12.h, top: 2.v),
+                                            child: Text("lbl_music_1_315".tr,
+                                                style:
+                                                    theme.textTheme.titleMedium))
+                                      ]),
+                                      SizedBox(height: 12.v),
+                                      Row(children: [
+                                        CustomImageView(
+                                            imagePath: ImageConstant.imgIcon30,
+                                            height: 24.adaptSize,
+                                            width: 24.adaptSize),
+                                        Padding(
+                                            padding: EdgeInsets.only(
+                                                left: 12.h, top: 3.v),
+                                            child: Text(
+                                                "msg_teaching_academics2".tr,
+                                                style:
+                                                    theme.textTheme.titleMedium))
+                                      ]),
+                                      SizedBox(height: 30.v),
+                                      Text("lbl_level".tr,
+                                          style: theme.textTheme.headlineSmall),
+                                      SizedBox(height: 18.v),
+                                      Row(children: [
+                                        CustomImageView(
+                                            imagePath: ImageConstant.imgIcon30,
+                                            height: 24.adaptSize,
+                                            width: 24.adaptSize),
+                                        Padding(
+                                            padding: EdgeInsets.only(
+                                                left: 12.h, top: 2.v),
+                                            child: Text("msg_all_level_8_715".tr,
+                                                style:
+                                                    theme.textTheme.titleMedium))
+                                      ]),
+                                      SizedBox(height: 12.v),
+                                      Row(children: [
+                                        CustomImageView(
+                                            imagePath: ImageConstant.imgIcon31,
+                                            height: 24.adaptSize,
+                                            width: 24.adaptSize),
+                                        Padding(
+                                            padding: EdgeInsets.only(
+                                                left: 12.h, top: 3.v),
+                                            child: Text("msg_beginner_2_562".tr,
+                                                style: CustomTextStyles
+                                                    .titleMediumPrimary_1))
+                                      ]),
+                                      SizedBox(height: 12.v),
                                       Padding(
-                                          padding: EdgeInsets.only(
-                                              left: 12.h, top: 2.v),
-                                          child: Text("msg_all_level_8_715".tr,
-                                              style:
-                                                  theme.textTheme.titleMedium))
-                                    ]),
-                                    SizedBox(height: 12.v),
-                                    Row(children: [
-                                      CustomImageView(
-                                          imagePath: ImageConstant.imgIcon31,
-                                          height: 24.adaptSize,
-                                          width: 24.adaptSize),
+                                          padding: EdgeInsets.only(right: 56.h),
+                                          child: Row(children: [
+                                            CustomImageView(
+                                                imagePath:
+                                                    ImageConstant.imgIcon30,
+                                                height: 24.adaptSize,
+                                                width: 24.adaptSize),
+                                            Padding(
+                                                padding: EdgeInsets.only(
+                                                    left: 12.h, top: 2.v),
+                                                child: Text(
+                                                    "msg_intermediate_2_856".tr,
+                                                    style: theme
+                                                        .textTheme.titleMedium))
+                                          ])),
+                                      SizedBox(height: 12.v),
+                                      _buildExpert(context,
+                                          userName: "lbl_expert_2_789".tr),
+                                      SizedBox(height: 30.v),
+                                      Text("lbl_video_duration".tr,
+                                          style: theme.textTheme.headlineSmall),
+                                      SizedBox(height: 18.v),
+                                      Row(children: [
+                                        CustomImageView(
+                                            imagePath: ImageConstant.imgIcon30,
+                                            height: 24.adaptSize,
+                                            width: 24.adaptSize),
+                                        Padding(
+                                            padding: EdgeInsets.only(
+                                                left: 12.h, top: 2.v),
+                                            child: Text("msg_0_2_hours_8_715".tr,
+                                                style:
+                                                    theme.textTheme.titleMedium))
+                                      ]),
+                                      SizedBox(height: 12.v),
                                       Padding(
-                                          padding: EdgeInsets.only(
-                                              left: 12.h, top: 3.v),
-                                          child: Text("msg_beginner_2_562".tr,
-                                              style: CustomTextStyles
-                                                  .titleMediumPrimary_1))
-                                    ]),
-                                    SizedBox(height: 12.v),
-                                    Padding(
-                                        padding: EdgeInsets.only(right: 56.h),
-                                        child: Row(children: [
-                                          CustomImageView(
-                                              imagePath:
-                                                  ImageConstant.imgIcon30,
-                                              height: 24.adaptSize,
-                                              width: 24.adaptSize),
-                                          Padding(
-                                              padding: EdgeInsets.only(
-                                                  left: 12.h, top: 2.v),
-                                              child: Text(
-                                                  "msg_intermediate_2_856".tr,
-                                                  style: theme
-                                                      .textTheme.titleMedium))
-                                        ])),
-                                    SizedBox(height: 12.v),
-                                    _buildExpert(context,
-                                        userName: "lbl_expert_2_789".tr),
-                                    SizedBox(height: 30.v),
-                                    Text("lbl_video_duration".tr,
-                                        style: theme.textTheme.headlineSmall),
-                                    SizedBox(height: 18.v),
-                                    Row(children: [
-                                      CustomImageView(
-                                          imagePath: ImageConstant.imgIcon30,
-                                          height: 24.adaptSize,
-                                          width: 24.adaptSize),
+                                          padding: EdgeInsets.only(right: 70.h),
+                                          child: Row(children: [
+                                            CustomImageView(
+                                                imagePath:
+                                                    ImageConstant.imgIcon31,
+                                                height: 24.adaptSize,
+                                                width: 24.adaptSize),
+                                            Padding(
+                                                padding: EdgeInsets.only(
+                                                    left: 12.h, top: 2.v),
+                                                child: Text(
+                                                    "msg_3_6_hours_2_562".tr,
+                                                    style: CustomTextStyles
+                                                        .titleMediumPrimary_1))
+                                          ])),
+                                      SizedBox(height: 12.v),
                                       Padding(
-                                          padding: EdgeInsets.only(
-                                              left: 12.h, top: 2.v),
-                                          child: Text("msg_0_2_hours_8_715".tr,
-                                              style:
-                                                  theme.textTheme.titleMedium))
-                                    ]),
-                                    SizedBox(height: 12.v),
-                                    Padding(
-                                        padding: EdgeInsets.only(right: 70.h),
-                                        child: Row(children: [
-                                          CustomImageView(
-                                              imagePath:
-                                                  ImageConstant.imgIcon31,
-                                              height: 24.adaptSize,
-                                              width: 24.adaptSize),
-                                          Padding(
-                                              padding: EdgeInsets.only(
-                                                  left: 12.h, top: 2.v),
-                                              child: Text(
-                                                  "msg_3_6_hours_2_562".tr,
-                                                  style: CustomTextStyles
-                                                      .titleMediumPrimary_1))
-                                        ])),
-                                    SizedBox(height: 12.v),
-                                    Padding(
-                                        padding: EdgeInsets.only(right: 60.h),
-                                        child: Row(children: [
-                                          CustomImageView(
-                                              imagePath:
-                                                  ImageConstant.imgIcon30,
-                                              height: 24.adaptSize,
-                                              width: 24.adaptSize),
-                                          Padding(
-                                              padding: EdgeInsets.only(
-                                                  left: 12.h, top: 2.v),
-                                              child: Text(
-                                                  "msg_7_16_hours_2_856".tr,
-                                                  style: theme
-                                                      .textTheme.titleMedium))
-                                        ])),
-                                    SizedBox(height: 12.v),
-                                    _buildC17Hours(context,
-                                        duration: "msg_17_hours_2_789".tr),
-                                    SizedBox(height: 33.v),
-                                    Text("lbl_rating".tr,
-                                        style: theme.textTheme.headlineSmall),
-                                    SizedBox(height: 15.v),
-                                    _buildFiveMillionTwentyThreeThousand(
-                                        context)
-                                  ]))))
-                ])),
-            bottomNavigationBar: _buildApplyFilters(context)));
+                                          padding: EdgeInsets.only(right: 60.h),
+                                          child: Row(children: [
+                                            CustomImageView(
+                                                imagePath:
+                                                    ImageConstant.imgIcon30,
+                                                height: 24.adaptSize,
+                                                width: 24.adaptSize),
+                                            Padding(
+                                                padding: EdgeInsets.only(
+                                                    left: 12.h, top: 2.v),
+                                                child: Text(
+                                                    "msg_7_16_hours_2_856".tr,
+                                                    style: theme
+                                                        .textTheme.titleMedium))
+                                          ])),
+                                      SizedBox(height: 12.v),
+                                      _buildC17Hours(context,
+                                          duration: "msg_17_hours_2_789".tr),
+                                      SizedBox(height: 33.v),
+                                      Text("lbl_rating".tr,
+                                          style: theme.textTheme.headlineSmall),
+                                      SizedBox(height: 15.v),
+                                      _buildFiveMillionTwentyThreeThousand(
+                                          context)
+                                    ]))))
+                  ]),
+                )),
+            bottomNavigationBar: _buildApplyFilters(context));
   }
 
   /// Section Widget

@@ -38,27 +38,28 @@ class SingleCoursesCompleteLessonsScreenPageState
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
 
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         backgroundColor: theme.colorScheme.primary,
         body: SizedBox(
           width: mediaQueryData.size.width,
           child: SingleChildScrollView(
-            child: Column(
-              children: [
-                SizedBox(height: 25.v),
-                Column(
-                  children: [
-                    _buildIntroductionSection(context),
-                    SizedBox(height: 24.v),
-                    _buildStartCourseAgainSection(context),
-                  ],
-                ),
-              ],
+            child: SafeArea(
+              child: Column(
+                children: [
+                  SizedBox(height: 25.v),
+                  Column(
+                    children: [
+                      _buildIntroductionSection(context),
+                      SizedBox(height: 24.v),
+                      _buildStartCourseAgainSection(context),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),
-      ),
+      
     );
   }
 

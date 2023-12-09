@@ -26,173 +26,174 @@ class CategoryScreenState extends State<CategoryScreen> {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             backgroundColor: theme.colorScheme.primary,
             appBar: _buildAppBar(context),
             body: SizedBox(
                 width: double.maxFinite,
-                child: Column(children: [
-                  SizedBox(height: 22.v),
-                  Expanded(
-                      child: SingleChildScrollView(
-                          child: Padding(
-                              padding: EdgeInsets.only(
-                                  left: 16.h, right: 16.h, bottom: 5.v),
-                              child: Column(children: [
-                                _buildWidget(context,
-                                    userImage:
-                                        ImageConstant.imgMaskGroup100x140,
-                                    userImageMask: ImageConstant.imgMaskGroup2),
-                                SizedBox(height: 12.v),
-                                Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Padding(
-                                        padding: EdgeInsets.only(right: 96.h),
-                                        child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              _buildContent(context,
-                                                  science: "lbl_business".tr,
-                                                  coursesCounter:
-                                                      "lbl_120_courses".tr),
-                                              _buildContent(context,
-                                                  science: "lbl_science".tr,
-                                                  coursesCounter:
-                                                      "lbl_266_courses".tr)
-                                            ]))),
-                                SizedBox(height: 14.v),
-                                _buildWidget(context,
-                                    userImage:
-                                        ImageConstant.imgMaskGroup120x163,
-                                    userImageMask:
-                                        ImageConstant.imgMaskGroup15),
-                                SizedBox(height: 13.v),
-                                _buildDevelopmentRow(context),
-                                SizedBox(height: 14.v),
-                                _buildWidget(context,
-                                    userImage: ImageConstant.imgMaskGroup80x80,
-                                    userImageMask:
-                                        ImageConstant.imgMaskGroup128x128),
-                                SizedBox(height: 12.v),
-                                _buildItSoftwareRow(context),
-                                SizedBox(height: 14.v),
-                                _buildWidget(context,
-                                    userImage: ImageConstant.imgMaskGroup6,
-                                    userImageMask:
-                                        ImageConstant.imgMaskGroup14),
-                                SizedBox(height: 13.v),
-                                Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Padding(
-                                        padding: EdgeInsets.only(right: 96.h),
-                                        child: Row(children: [
-                                          Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
+                child: SafeArea(
+                  child: Column(children: [
+                    SizedBox(height: 22.v),
+                    Expanded(
+                        child: SingleChildScrollView(
+                            child: Padding(
+                                padding: EdgeInsets.only(
+                                    left: 16.h, right: 16.h, bottom: 5.v),
+                                child: Column(children: [
+                                  _buildWidget(context,
+                                      userImage:
+                                          ImageConstant.imgMaskGroup100x140,
+                                      userImageMask: ImageConstant.imgMaskGroup2),
+                                  SizedBox(height: 12.v),
+                                  Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: Padding(
+                                          padding: EdgeInsets.only(right: 96.h),
+                                          child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceBetween,
                                               children: [
-                                                Text(
-                                                    "msg_personal_development"
-                                                        .tr,
-                                                    style: CustomTextStyles
-                                                        .titleMediumOnError),
-                                                SizedBox(height: 1.v),
-                                                Text("lbl_94_courses".tr,
-                                                    style: CustomTextStyles
-                                                        .labelLargeGray700_1)
-                                              ]),
-                                          Padding(
-                                              padding:
-                                                  EdgeInsets.only(left: 18.h),
-                                              child: _buildContent(context,
-                                                  science: "lbl_design".tr,
-                                                  coursesCounter:
-                                                      "lbl_182_courses".tr))
-                                        ]))),
-                                SizedBox(height: 14.v),
-                                _buildWidget(context,
-                                    userImage: ImageConstant.imgMaskGroup16,
-                                    userImageMask:
-                                        ImageConstant.imgMaskGroup17),
-                                SizedBox(height: 13.v),
-                                Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Padding(
-                                        padding: EdgeInsets.only(right: 103.h),
-                                        child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text("lbl_marketing".tr,
-                                                        style: CustomTextStyles
-                                                            .titleMediumOnError),
-                                                    SizedBox(height: 1.v),
-                                                    Text("lbl_254_courses".tr,
-                                                        style: CustomTextStyles
-                                                            .labelLargeGray700_1)
-                                                  ]),
-                                              _buildContent1(context,
-                                                  userName: "lbl_lifestyle".tr,
-                                                  userCoursesCounter:
-                                                      "lbl_68_courses".tr)
-                                            ]))),
-                                SizedBox(height: 14.v),
-                                _buildWidget(context,
-                                    userImage: ImageConstant.imgMaskGroup18,
-                                    userImageMask:
-                                        ImageConstant.imgMaskGroup19),
-                                SizedBox(height: 12.v),
-                                Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Padding(
-                                        padding: EdgeInsets.only(right: 46.h),
-                                        child: Row(children: [
-                                          Padding(
-                                              padding:
-                                                  EdgeInsets.only(top: 1.v),
-                                              child: Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text(
-                                                        "msg_photography_video"
-                                                            .tr,
-                                                        style: CustomTextStyles
-                                                            .titleMediumOnError),
-                                                    SizedBox(height: 1.v),
-                                                    Text("lbl_136_courses".tr,
-                                                        style: CustomTextStyles
-                                                            .labelLargeGray700_1)
-                                                  ])),
-                                          Padding(
-                                              padding:
-                                                  EdgeInsets.only(left: 28.h),
-                                              child: Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text(
-                                                        "msg_health_fitness".tr,
-                                                        style: CustomTextStyles
-                                                            .titleMediumOnError),
-                                                    SizedBox(height: 3.v),
-                                                    Text("lbl_231_courses".tr,
-                                                        style: CustomTextStyles
-                                                            .labelLargeGray700_1)
-                                                  ]))
-                                        ]))),
-                                SizedBox(height: 14.v),
-                                _buildWidget(context,
-                                    userImage: ImageConstant.imgMaskGroup13,
-                                    userImageMask: ImageConstant.imgMaskGroup20)
-                              ]))))
-                ])),
-            bottomNavigationBar: _buildMusicRow(context)));
+                                                _buildContent(context,
+                                                    science: "lbl_business".tr,
+                                                    coursesCounter:
+                                                        "lbl_120_courses".tr),
+                                                _buildContent(context,
+                                                    science: "lbl_science".tr,
+                                                    coursesCounter:
+                                                        "lbl_266_courses".tr)
+                                              ]))),
+                                  SizedBox(height: 14.v),
+                                  _buildWidget(context,
+                                      userImage:
+                                          ImageConstant.imgMaskGroup120x163,
+                                      userImageMask:
+                                          ImageConstant.imgMaskGroup15),
+                                  SizedBox(height: 13.v),
+                                  _buildDevelopmentRow(context),
+                                  SizedBox(height: 14.v),
+                                  _buildWidget(context,
+                                      userImage: ImageConstant.imgMaskGroup80x80,
+                                      userImageMask:
+                                          ImageConstant.imgMaskGroup128x128),
+                                  SizedBox(height: 12.v),
+                                  _buildItSoftwareRow(context),
+                                  SizedBox(height: 14.v),
+                                  _buildWidget(context,
+                                      userImage: ImageConstant.imgMaskGroup6,
+                                      userImageMask:
+                                          ImageConstant.imgMaskGroup14),
+                                  SizedBox(height: 13.v),
+                                  Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: Padding(
+                                          padding: EdgeInsets.only(right: 96.h),
+                                          child: Row(children: [
+                                            Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                      "msg_personal_development"
+                                                          .tr,
+                                                      style: CustomTextStyles
+                                                          .titleMediumOnError),
+                                                  SizedBox(height: 1.v),
+                                                  Text("lbl_94_courses".tr,
+                                                      style: CustomTextStyles
+                                                          .labelLargeGray700_1)
+                                                ]),
+                                            Padding(
+                                                padding:
+                                                    EdgeInsets.only(left: 18.h),
+                                                child: _buildContent(context,
+                                                    science: "lbl_design".tr,
+                                                    coursesCounter:
+                                                        "lbl_182_courses".tr))
+                                          ]))),
+                                  SizedBox(height: 14.v),
+                                  _buildWidget(context,
+                                      userImage: ImageConstant.imgMaskGroup16,
+                                      userImageMask:
+                                          ImageConstant.imgMaskGroup17),
+                                  SizedBox(height: 13.v),
+                                  Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: Padding(
+                                          padding: EdgeInsets.only(right: 103.h),
+                                          child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment.start,
+                                                    children: [
+                                                      Text("lbl_marketing".tr,
+                                                          style: CustomTextStyles
+                                                              .titleMediumOnError),
+                                                      SizedBox(height: 1.v),
+                                                      Text("lbl_254_courses".tr,
+                                                          style: CustomTextStyles
+                                                              .labelLargeGray700_1)
+                                                    ]),
+                                                _buildContent1(context,
+                                                    userName: "lbl_lifestyle".tr,
+                                                    userCoursesCounter:
+                                                        "lbl_68_courses".tr)
+                                              ]))),
+                                  SizedBox(height: 14.v),
+                                  _buildWidget(context,
+                                      userImage: ImageConstant.imgMaskGroup18,
+                                      userImageMask:
+                                          ImageConstant.imgMaskGroup19),
+                                  SizedBox(height: 12.v),
+                                  Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: Padding(
+                                          padding: EdgeInsets.only(right: 46.h),
+                                          child: Row(children: [
+                                            Padding(
+                                                padding:
+                                                    EdgeInsets.only(top: 1.v),
+                                                child: Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment.start,
+                                                    children: [
+                                                      Text(
+                                                          "msg_photography_video"
+                                                              .tr,
+                                                          style: CustomTextStyles
+                                                              .titleMediumOnError),
+                                                      SizedBox(height: 1.v),
+                                                      Text("lbl_136_courses".tr,
+                                                          style: CustomTextStyles
+                                                              .labelLargeGray700_1)
+                                                    ])),
+                                            Padding(
+                                                padding:
+                                                    EdgeInsets.only(left: 28.h),
+                                                child: Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment.start,
+                                                    children: [
+                                                      Text(
+                                                          "msg_health_fitness".tr,
+                                                          style: CustomTextStyles
+                                                              .titleMediumOnError),
+                                                      SizedBox(height: 3.v),
+                                                      Text("lbl_231_courses".tr,
+                                                          style: CustomTextStyles
+                                                              .labelLargeGray700_1)
+                                                    ]))
+                                          ]))),
+                                  SizedBox(height: 14.v),
+                                  _buildWidget(context,
+                                      userImage: ImageConstant.imgMaskGroup13,
+                                      userImageMask: ImageConstant.imgMaskGroup20)
+                                ]))))
+                  ]),
+                )),
+            bottomNavigationBar: _buildMusicRow(context));
   }
 
   /// Section Widget

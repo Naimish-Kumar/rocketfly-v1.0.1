@@ -31,50 +31,51 @@ class ApplyCouponScreenOneScreenState
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
             resizeToAvoidBottomInset: false,
             appBar: _buildAppBar(context),
             body: Container(
                 width: double.maxFinite,
                 padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 22.v),
-                child: Column(children: [
-                  Selector<ApplyCouponScreenOneProvider,
-                          TextEditingController?>(
-                      selector: (context, provider) =>
-                          provider.couponCodeController,
-                      builder: (context, couponCodeController, child) {
-                        return CustomTextFormField(
-                            controller: couponCodeController,
-                            hintText: "msg_enter_your_coupon".tr,
-                            hintStyle: theme.textTheme.bodyLarge!,
-                            textInputAction: TextInputAction.done,
-                            prefix: Container(
-                                margin: EdgeInsets.all(12.h),
-                                child: CustomImageView(
-                                    imagePath:
-                                        ImageConstant.imgIconOnprimarycontainer,
-                                    height: 24.adaptSize,
-                                    width: 24.adaptSize)),
-                            prefixConstraints: BoxConstraints(maxHeight: 48.v));
-                      }),
-                  SizedBox(height: 32.v),
-                  CustomElevatedButton(text: "lbl_apply".tr),
-                  SizedBox(height: 32.v),
-                  Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text("msg_available_coupons".tr,
-                          style: theme.textTheme.headlineSmall)),
-                  SizedBox(height: 8.v),
-                  Opacity(opacity: 0.08, child: Divider()),
-                  SizedBox(height: 24.v),
-                  _buildOne(context),
-                  SizedBox(height: 24.v),
-                  _buildTwo(context),
-                  SizedBox(height: 24.v),
-                  _buildThree(context),
-                  SizedBox(height: 5.v)
-                ]))));
+                child: SafeArea(
+                  child: Column(children: [
+                    Selector<ApplyCouponScreenOneProvider,
+                            TextEditingController?>(
+                        selector: (context, provider) =>
+                            provider.couponCodeController,
+                        builder: (context, couponCodeController, child) {
+                          return CustomTextFormField(
+                              controller: couponCodeController,
+                              hintText: "msg_enter_your_coupon".tr,
+                              hintStyle: theme.textTheme.bodyLarge!,
+                              textInputAction: TextInputAction.done,
+                              prefix: Container(
+                                  margin: EdgeInsets.all(12.h),
+                                  child: CustomImageView(
+                                      imagePath:
+                                          ImageConstant.imgIconOnprimarycontainer,
+                                      height: 24.adaptSize,
+                                      width: 24.adaptSize)),
+                              prefixConstraints: BoxConstraints(maxHeight: 48.v));
+                        }),
+                    SizedBox(height: 32.v),
+                    CustomElevatedButton(text: "lbl_apply".tr),
+                    SizedBox(height: 32.v),
+                    Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text("msg_available_coupons".tr,
+                            style: theme.textTheme.headlineSmall)),
+                    SizedBox(height: 8.v),
+                    Opacity(opacity: 0.08, child: Divider()),
+                    SizedBox(height: 24.v),
+                    _buildOne(context),
+                    SizedBox(height: 24.v),
+                    _buildTwo(context),
+                    SizedBox(height: 24.v),
+                    _buildThree(context),
+                    SizedBox(height: 5.v)
+                  ]),
+                )));
   }
 
   /// Section Widget

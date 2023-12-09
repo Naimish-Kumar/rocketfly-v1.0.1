@@ -28,32 +28,32 @@ class SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
 
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         body: SizedBox(
           width: double.maxFinite,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CustomImageView(
-                imagePath: ImageConstant.imgLogo,
-                height: 100.adaptSize,
-                width: 100.adaptSize,
-              ),
-              SizedBox(height: 24.v),
-              Text(
-                "lbl_guruji".tr,
-                style: theme.textTheme.displayMedium,
-              ),
-              SizedBox(height: 33.v),
-              Text(
-                "msg_learn_anytime_and".tr,
-                style: CustomTextStyles.titleMedium18,
-              ),
-            ],
+          child: SafeArea(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CustomImageView(
+                  imagePath: ImageConstant.imgLogo,
+                  height: 100.adaptSize,
+                  width: 100.adaptSize,
+                ),
+                SizedBox(height: 24.v),
+                Text(
+                  "lbl_guruji".tr,
+                  style: theme.textTheme.displayMedium,
+                ),
+                SizedBox(height: 33.v),
+                Text(
+                  "msg_learn_anytime_and".tr,
+                  style: CustomTextStyles.titleMedium18,
+                ),
+              ],
+            ),
           ),
         ),
-      ),
     );
   }
 }

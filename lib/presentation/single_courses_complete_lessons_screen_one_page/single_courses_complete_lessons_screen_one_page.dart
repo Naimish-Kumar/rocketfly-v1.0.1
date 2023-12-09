@@ -39,27 +39,26 @@ class SingleCoursesCompleteLessonsScreenOnePageState
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         body: SizedBox(
           width: mediaQueryData.size.width,
           child: SingleChildScrollView(
-            child: Column(
-              children: [
-                SizedBox(height: 25.v),
-                Column(
-                  children: [
-                    _buildIntroduction(context),
-                    SizedBox(height: 24.v),
-                    _buildStartCourseAgain(context),
-                  ],
-                ),
-              ],
+            child: SafeArea(
+              child: Column(
+                children: [
+                  SizedBox(height: 25.v),
+                  Column(
+                    children: [
+                      _buildIntroduction(context),
+                      SizedBox(height: 24.v),
+                      _buildStartCourseAgain(context),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),
-      ),
     );
   }
 

@@ -41,8 +41,7 @@ class HomeScreenPageState extends State<HomeScreenPage> {
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
 
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         backgroundColor: theme.colorScheme.primary,
         resizeToAvoidBottomInset: false,
         appBar: _buildAppBar(context),
@@ -57,112 +56,114 @@ class HomeScreenPageState extends State<HomeScreenPage> {
                 left: 16.h,
                 bottom: 52.v,
               ),
-              child: Stack(
-                alignment: Alignment.topRight,
-                children: [
-                  Align(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "lbl_hey_jesica".tr,
-                          style: CustomTextStyles.headlineSmallOnErrorSemiBold,
-                        ),
-                        SizedBox(height: 9.v),
-                        Text(
-                          "msg_find_a_course_you".tr,
-                          style: CustomTextStyles.titleMediumGray700_2,
-                        ),
-                        SizedBox(height: 17.v),
-                        Padding(
-                          padding: EdgeInsets.only(right: 16.h),
-                          child: Selector<HomeScreenProvider,
-                              TextEditingController?>(
-                            selector: (
+              child: SafeArea(
+                child: Stack(
+                  alignment: Alignment.topRight,
+                  children: [
+                    Align(
+                      alignment: Alignment.center,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "lbl_hey_jesica".tr,
+                            style: CustomTextStyles.headlineSmallOnErrorSemiBold,
+                          ),
+                          SizedBox(height: 9.v),
+                          Text(
+                            "msg_find_a_course_you".tr,
+                            style: CustomTextStyles.titleMediumGray700_2,
+                          ),
+                          SizedBox(height: 17.v),
+                          Padding(
+                            padding: EdgeInsets.only(right: 16.h),
+                            child: Selector<HomeScreenProvider,
+                                TextEditingController?>(
+                              selector: (
+                                context,
+                                provider,
+                              ) =>
+                                  provider.searchController,
+                              builder: (context, searchController, child) {
+                                return CustomSearchView(
+                                  controller: searchController,
+                                  hintText: "lbl_search_here".tr,
+                                  borderDecoration:
+                                      SearchViewStyleHelper.fillGray,
+                                  fillColor: appTheme.gray700,
+                                );
+                              },
+                            ),
+                          ),
+                          SizedBox(height: 23.v),
+                          Padding(
+                            padding: EdgeInsets.only(right: 16.h),
+                            child: _buildTrendingCourses(
                               context,
-                              provider,
-                            ) =>
-                                provider.searchController,
-                            builder: (context, searchController, child) {
-                              return CustomSearchView(
-                                controller: searchController,
-                                hintText: "lbl_search_here".tr,
-                                borderDecoration:
-                                    SearchViewStyleHelper.fillGray,
-                                fillColor: appTheme.gray700,
-                              );
-                            },
+                              trendingCoursesText: "lbl_categories".tr,
+                              seeAllText: "lbl_see_all".tr,
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 23.v),
-                        Padding(
-                          padding: EdgeInsets.only(right: 16.h),
-                          child: _buildTrendingCourses(
-                            context,
-                            trendingCoursesText: "lbl_categories".tr,
-                            seeAllText: "lbl_see_all".tr,
+                          _buildBusinessList(context),
+                          SizedBox(height: 12.v),
+                          CustomImageView(
+                            imagePath: ImageConstant.imgMaskGroup3,
+                            height: 100.v,
+                            width: 140.h,
+                            alignment: Alignment.centerRight,
                           ),
-                        ),
-                        _buildBusinessList(context),
-                        SizedBox(height: 12.v),
-                        CustomImageView(
-                          imagePath: ImageConstant.imgMaskGroup3,
-                          height: 100.v,
-                          width: 140.h,
-                          alignment: Alignment.centerRight,
-                        ),
-                        SizedBox(height: 29.v),
-                        _buildBannerSlider(context),
-                        SizedBox(height: 23.v),
-                        Padding(
-                          padding: EdgeInsets.only(right: 16.h),
-                          child: _buildTrendingCourses(
-                            context,
-                            trendingCoursesText: "msg_trending_courses".tr,
-                            seeAllText: "lbl_see_all".tr,
+                          SizedBox(height: 29.v),
+                          _buildBannerSlider(context),
+                          SizedBox(height: 23.v),
+                          Padding(
+                            padding: EdgeInsets.only(right: 16.h),
+                            child: _buildTrendingCourses(
+                              context,
+                              trendingCoursesText: "msg_trending_courses".tr,
+                              seeAllText: "lbl_see_all".tr,
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 12.v),
-                        _buildDurationRow(context),
-                        SizedBox(height: 13.v),
-                        _buildLearningBlenderRow(context),
-                        SizedBox(height: 5.v),
-                        _buildDurationRow1(context),
-                        SizedBox(height: 27.v),
-                        Padding(
-                          padding: EdgeInsets.only(right: 16.h),
-                          child: _buildTrendingCourses(
-                            context,
-                            trendingCoursesText: "lbl_new_release".tr,
-                            seeAllText: "lbl_see_all".tr,
+                          SizedBox(height: 12.v),
+                          _buildDurationRow(context),
+                          SizedBox(height: 13.v),
+                          _buildLearningBlenderRow(context),
+                          SizedBox(height: 5.v),
+                          _buildDurationRow1(context),
+                          SizedBox(height: 27.v),
+                          Padding(
+                            padding: EdgeInsets.only(right: 16.h),
+                            child: _buildTrendingCourses(
+                              context,
+                              trendingCoursesText: "lbl_new_release".tr,
+                              seeAllText: "lbl_see_all".tr,
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 15.v),
-                        _buildBookmarkList(context),
-                        _buildMasterYourMindsetRow(context),
-                        SizedBox(height: 3.v),
-                        _buildDurationRow2(context),
-                      ],
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.topRight,
-                    child: Padding(
-                      padding: EdgeInsets.only(top: 303.v),
-                      child: Text(
-                        "lbl_ui_ux_design".tr,
-                        style: CustomTextStyles.titleMediumOnError,
+                          SizedBox(height: 15.v),
+                          _buildBookmarkList(context),
+                          _buildMasterYourMindsetRow(context),
+                          SizedBox(height: 3.v),
+                          _buildDurationRow2(context),
+                        ],
                       ),
                     ),
-                  ),
-                ],
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 303.v),
+                        child: Text(
+                          "lbl_ui_ux_design".tr,
+                          style: CustomTextStyles.titleMediumOnError,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
         ),
-      ),
+      
     );
   }
 

@@ -29,23 +29,23 @@ class SplashScreenOneScreenState extends State<SplashScreenOneScreen> {
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
 
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         backgroundColor: theme.colorScheme.primary,
         body: Container(
           width: double.maxFinite,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(ImageConstant.mainLogo),
-              Text(
-                "msg_learn_anytime_and".tr,
-                style: CustomTextStyles.titleMediumGray70018,
-              ),
-            ],
+          child: SafeArea(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(ImageConstant.mainLogo),
+                Text(
+                  "msg_learn_anytime_and".tr,
+                  style: CustomTextStyles.titleMediumGray70018,
+                ),
+              ],
+            ),
           ),
         ),
-      ),
     );
   }
 }

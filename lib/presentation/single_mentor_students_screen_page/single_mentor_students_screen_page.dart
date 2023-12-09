@@ -36,47 +36,47 @@ class SingleMentorStudentsScreenPageState
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
 
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         body: Container(
           width: double.maxFinite,
           decoration: AppDecoration.fillOnPrimaryContainer,
-          child: Column(
-            children: [
-              SizedBox(height: 16.v),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.h),
-                child: Consumer<SingleMentorStudentsScreenProvider>(
-                  builder: (context, provider, child) {
-                    return ListView.separated(
-                      physics: NeverScrollableScrollPhysics(),
-                      shrinkWrap: true,
-                      separatorBuilder: (
-                        context,
-                        index,
-                      ) {
-                        return SizedBox(
-                          height: 16.v,
-                        );
-                      },
-                      itemCount: provider.singleMentorStudentsScreenModelObj
-                          .bennyspanbauerItemList.length,
-                      itemBuilder: (context, index) {
-                        BennyspanbauerItemModel model = provider
-                            .singleMentorStudentsScreenModelObj
-                            .bennyspanbauerItemList[index];
-                        return BennyspanbauerItemWidget(
-                          model,
-                        );
-                      },
-                    );
-                  },
+          child: SafeArea(
+            child: Column(
+              children: [
+                SizedBox(height: 16.v),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.h),
+                  child: Consumer<SingleMentorStudentsScreenProvider>(
+                    builder: (context, provider, child) {
+                      return ListView.separated(
+                        physics: NeverScrollableScrollPhysics(),
+                        shrinkWrap: true,
+                        separatorBuilder: (
+                          context,
+                          index,
+                        ) {
+                          return SizedBox(
+                            height: 16.v,
+                          );
+                        },
+                        itemCount: provider.singleMentorStudentsScreenModelObj
+                            .bennyspanbauerItemList.length,
+                        itemBuilder: (context, index) {
+                          BennyspanbauerItemModel model = provider
+                              .singleMentorStudentsScreenModelObj
+                              .bennyspanbauerItemList[index];
+                          return BennyspanbauerItemWidget(
+                            model,
+                          );
+                        },
+                      );
+                    },
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
-      ),
     );
   }
 }
