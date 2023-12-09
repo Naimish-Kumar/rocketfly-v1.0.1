@@ -32,53 +32,68 @@ class SpendLearningScreenState extends State<SpendLearningScreen> {
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
     return Scaffold(
-            appBar: _buildAppBar(context),
-            body: Container(
-                width: double.maxFinite,
-                padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 24.v),
-                child: SafeArea(
-                  child: Column(children: [
-                    Container(
-                        width: 325.h,
-                        margin: EdgeInsets.symmetric(horizontal: 8.h),
-                        child: Text("msg_how_much_time_do".tr,
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            textAlign: TextAlign.center,
-                            style: theme.textTheme.titleMedium!
-                                .copyWith(height: 1.50))),
-                    SizedBox(height: 29.v),
-                    _buildDuration(context)
-                  ]),
-                )),
-            bottomNavigationBar: _buildNext(context));
+      appBar: _buildAppBar(context),
+      body: Container(
+        width: double.maxFinite,
+        padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 24.v),
+        child: SafeArea(
+          child: Column(children: [
+            Container(
+              width: 325.h,
+              margin: EdgeInsets.symmetric(horizontal: 8.h),
+              child: Text(
+                "msg_how_much_time_do".tr,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                textAlign: TextAlign.center,
+                style: theme.textTheme.titleMedium!.copyWith(height: 1.50),
+              ),
+            ),
+            SizedBox(height: 29.v),
+            _buildDuration(context)
+          ]),
+        ),
+      ),
+      bottomNavigationBar: _buildNext(context),
+    );
   }
 
   /// Section Widget
   PreferredSizeWidget _buildAppBar(BuildContext context) {
     return CustomAppBar(
         centerTitle: true,
-        title: Column(children: [
-          Padding(
+        title: Column(
+          children: [
+            Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.h),
-              child: Row(children: [
-                AppbarTitleImage(
-                    imagePath: ImageConstant.imgArrowLeftPrimary,
-                    onTap: () {
-                      onTapArrowLeft(context);
-                    }),
-                AppbarSubtitle(
+              child: Row(
+                children: [
+                  AppbarTitleImage(
+                      imagePath: ImageConstant.imgArrowLeftPrimary,
+                      onTap: () {
+                        onTapArrowLeft(context);
+                      }),
+                  AppbarSubtitle(
                     text: "lbl_spend_learning".tr,
-                    margin: EdgeInsets.only(left: 82.h, top: 2.v, bottom: 3.v)),
-                AppbarSubtitleThree(
+                    margin: EdgeInsets.only(left: 82.h, top: 2.v, bottom: 3.v),
+                  ),
+                  AppbarSubtitleThree(
                     text: "lbl_skip".tr,
-                    margin: EdgeInsets.only(left: 71.h, top: 2.v))
-              ])),
-          SizedBox(height: 9.v),
-          Opacity(
+                    margin: EdgeInsets.only(left: 71.h, top: 2.v),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(height: 9.v),
+            Opacity(
               opacity: 0.08,
-              child: SizedBox(width: double.maxFinite, child: Divider()))
-        ]),
+              child: SizedBox(
+                width: double.maxFinite,
+                child: Divider(),
+              ),
+            )
+          ],
+        ),
         styleType: Style.bgFill_1);
   }
 
@@ -103,8 +118,9 @@ class SpendLearningScreenState extends State<SpendLearningScreen> {
   /// Section Widget
   Widget _buildNext(BuildContext context) {
     return CustomElevatedButton(
-        text: "lbl_next".tr,
-        margin: EdgeInsets.only(left: 16.h, right: 16.h, bottom: 50.v));
+      text: "lbl_next".tr,
+      margin: EdgeInsets.only(left: 16.h, right: 16.h, bottom: 50.v),
+    );
   }
 
   /// Navigates to the previous screen.

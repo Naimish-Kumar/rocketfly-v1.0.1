@@ -62,7 +62,6 @@ import 'package:rocketfly/presentation/profile_edit_screen_one_screen/profile_ed
 import 'package:rocketfly/presentation/notification_screen_one1_screen/notification_screen_one1_screen.dart';
 import 'package:rocketfly/presentation/currency_screen/currency_screen.dart';
 import 'package:rocketfly/presentation/privacy_policy_screen_one_screen/privacy_policy_screen_one_screen.dart';
-import 'package:rocketfly/presentation/app_navigation_screen/app_navigation_screen.dart';
 
 class AppRoutes {
   static const String splashScreenOneScreen = '/splash_screen_one_screen';
@@ -381,7 +380,6 @@ class AppRoutes {
         notificationScreenOne1Screen: NotificationScreenOne1Screen.builder,
         currencyScreen: CurrencyScreen.builder,
         privacyPolicyScreenOneScreen: PrivacyPolicyScreenOneScreen.builder,
-        appNavigationScreen: AppNavigationScreen.builder,
         initialRoute: SplashScreenOneScreen.builder
       };
 }

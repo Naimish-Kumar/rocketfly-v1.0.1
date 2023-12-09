@@ -34,6 +34,7 @@ class SingleMentorCoursesScreenPageState
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     mediaQueryData = MediaQuery.of(context);
 
     return Scaffold(

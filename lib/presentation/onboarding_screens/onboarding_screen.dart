@@ -1,12 +1,8 @@
-import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:rocketfly/core/app_export.dart';
-import 'package:rocketfly/presentation/onboarding_screen_one_one_screen/onboarding_screen_one_one_screen.dart';
-import 'package:rocketfly/presentation/onboarding_screen_three_one_screen/onboarding_screen_three_one_screen.dart';
-import 'package:rocketfly/presentation/onboarding_screen_two_one_screen/onboarding_screen_two_one_screen.dart';
-import 'package:rocketfly/routes/app_routes.dart';
-import 'package:rocketfly/theme/custom_button_style.dart';
-import 'package:rocketfly/theme/theme_helper.dart';
+import 'package:rocketfly/presentation/onboarding_screens/onboarding_screen_one.dart';
+import 'package:rocketfly/presentation/onboarding_screens/onboarding_screen_three.dart';
+import 'package:rocketfly/presentation/onboarding_screens/onboarding_screen_two.dart';
 import 'package:rocketfly/widgets/custom_elevated_button.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -47,16 +43,17 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 }),
               ),
             ),
-        //    OnBoardingAnimation(
-        //   pages: onboardingScreens,
-        //   indicatorDotHeight: 7.0,
-        //   indicatorDotWidth: 7.0,
-        //   indicatorType: IndicatorType.expandingDots,
-        //   indicatorPosition: IndicatorPosition.bottomCenter,
-        // ),
+            //    OnBoardingAnimation(
+            //   pages: onboardingScreens,
+            //   indicatorDotHeight: 7.0,
+            //   indicatorDotWidth: 7.0,
+            //   indicatorType: IndicatorType.expandingDots,
+            //   indicatorPosition: IndicatorPosition.bottomCenter,
+            // ),
             Align(
-                alignment: Alignment.bottomCenter,
-                child: _buildNextButton(context)),
+              alignment: Alignment.bottomCenter,
+              child: _buildNextButton(context),
+            ),
           ],
         ),
       ),

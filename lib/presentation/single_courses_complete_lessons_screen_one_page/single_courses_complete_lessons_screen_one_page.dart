@@ -38,6 +38,7 @@ class SingleCoursesCompleteLessonsScreenOnePageState
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     mediaQueryData = MediaQuery.of(context);
     return Scaffold(
         body: SizedBox(
@@ -73,8 +74,7 @@ class SingleCoursesCompleteLessonsScreenOnePageState
               shrinkWrap: true,
               stickyHeaderBackgroundColor: Colors.transparent,
               elements: provider.singleCoursesCompleteLessonsScreenOneModelObj
-                      .introduction4ItemList ??
-                  [],
+                      .introduction4ItemList,
               groupBy: (element) => element.groupBy!,
               sort: false,
               groupSeparatorBuilder: (String value) {

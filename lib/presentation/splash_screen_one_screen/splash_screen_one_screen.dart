@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:rocketfly/core/app_export.dart';
 import 'provider/splash_screen_one_provider.dart';
 
